@@ -1,0 +1,24 @@
+# Hugo
+/public/
+/resources/
+/themes/*/exampleSite/
+/themes/ryder-dev
+/themes/art-collection-theme
+*.log
+/_ignore/
+/node_modules
+
+# frontmatter
+.frontmatter/
+frontmatter.json
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Editor-specific
+.vscode/
+.idea/
