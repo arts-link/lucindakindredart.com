@@ -1,0 +1,6 @@
+quality = 75
+resampleFilter = "CatmullRom"
+[exif]
+  disableDate = false
+  disableLatLong = true
+  includeFields = "ImageDescription|Orientation"

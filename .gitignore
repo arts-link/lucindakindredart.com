@@ -1,9 +1,7 @@
 # Hugo
 /public/
 /resources/
-/themes/*/exampleSite/
-/themes/ryder-dev
-/themes/art-collection-theme
+/themes/gallery-dev
 *.log
 /_ignore/
 /node_modules

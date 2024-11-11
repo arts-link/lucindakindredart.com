@@ -1,0 +1,15 @@
+# defaultTheme = "dark"
+description = "Fabric art pieces inspired by Australian Aboriginal Art patterns and stories."
+title = "Lucinda Kindred Art"
+[author]
+  email = "lucinkin@gmail.com"
+  name = "Lucinda Kindred"
+[socialIcons]
+  # facebook = "https://www.facebook.com/"
+  email = "mailto:lucinkin@gmail.com"
+  #instagram = "https://www.instagram.com/"
+  #github = "https://github.com/nicokaiser/hugo-theme-gallery/"
+  #youtube = "https://www.youtube.com/"
+  #website = "https://example.com"
+  #mastodon = "https://example.com"
+  #pixelfed = "https://example.com"
