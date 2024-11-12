@@ -1,6 +1,6 @@
 +++
-title = '{{ getenv "HUGO_TITLE" }}'
-date = {{ .Date }}
+title = 'ABSTRACT ABORIGINAL'
+date = 2024-11-11T22:36:28-08:00
 media = 'Embroidery on Linen'
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -13,10 +13,10 @@ media = 'Embroidery on Linen'
 # weight = # sort weight
 # sort_order = # default is asc
 series = ['cool']
-dimensions = "{{ getenv "HUGO_DIMENSIONS" }}"
+dimensions = "8 X 10"
 [[resources]]
   src = ""
-  title = "{{ getenv "HUGO_TITLE" }}"
+  title = "ABSTRACT ABORIGINAL"
   [resources.params]
   date = ""
 
