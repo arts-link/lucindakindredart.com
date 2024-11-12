@@ -15,7 +15,7 @@ media = 'Embroidery on Linen'
 series = ['cool']
 dimensions = "{{ getenv "HUGO_DIMENSIONS" }}"
 [[resources]]
-  src = ""
+  src = "{{ getenv "HUGO_IMAGE_NAME" }}"
   title = "{{ getenv "HUGO_TITLE" }}"
   [resources.params]
   date = ""

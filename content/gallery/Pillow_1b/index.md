@@ -1,6 +1,6 @@
 +++
 title = 'PILLOW'
-date = 2024-11-11T22:36:27-08:00
+date = 2024-11-11T22:58:19-08:00
 media = 'Embroidery on Linen'
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -15,7 +15,7 @@ media = 'Embroidery on Linen'
 series = ['cool']
 dimensions = ""
 [[resources]]
-  src = ""
+  src = "Pillow 1b.webp"
   title = "PILLOW"
   [resources.params]
   date = ""

@@ -1,6 +1,6 @@
 +++
 title = 'DOUBLE IMAGE'
-date = 2024-11-11T22:36:27-08:00
+date = 2024-11-11T22:58:18-08:00
 media = 'Embroidery on Linen'
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -15,7 +15,7 @@ media = 'Embroidery on Linen'
 series = ['cool']
 dimensions = "8 X 10"
 [[resources]]
-  src = ""
+  src = "Paige Peterson.webp"
   title = "DOUBLE IMAGE"
   [resources.params]
   date = ""

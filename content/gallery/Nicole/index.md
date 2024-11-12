@@ -1,6 +1,6 @@
 +++
 title = 'LINES AND PYRAMIDS'
-date = 2024-11-11T22:36:27-08:00
+date = 2024-11-11T22:58:18-08:00
 media = 'Embroidery on Linen'
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -15,7 +15,7 @@ media = 'Embroidery on Linen'
 series = ['cool']
 dimensions = "12 X 12"
 [[resources]]
-  src = ""
+  src = "Nicole.webp"
   title = "LINES AND PYRAMIDS"
   [resources.params]
   date = ""

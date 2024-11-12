@@ -1,6 +1,6 @@
 +++
 title = 'WOOL FANS'
-date = 2024-11-11T22:36:26-08:00
+date = 2024-11-11T22:58:17-08:00
 media = 'Embroidery on Linen'
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -15,7 +15,7 @@ media = 'Embroidery on Linen'
 series = ['cool']
 dimensions = "8 X 10 framed"
 [[resources]]
-  src = ""
+  src = "Adena - wool fans.webp"
   title = "WOOL FANS"
   [resources.params]
   date = ""

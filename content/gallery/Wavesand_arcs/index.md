@@ -1,6 +1,6 @@
 +++
 title = 'WAVES AND ARCS -'
-date = 2024-11-11T22:36:28-08:00
+date = 2024-11-11T22:58:19-08:00
 media = 'Embroidery on Linen'
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -15,7 +15,7 @@ media = 'Embroidery on Linen'
 series = ['cool']
 dimensions = "10 X 10"
 [[resources]]
-  src = ""
+  src = "Waves& arcs.webp"
   title = "WAVES AND ARCS -"
   [resources.params]
   date = ""

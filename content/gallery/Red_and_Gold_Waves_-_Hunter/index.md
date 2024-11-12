@@ -1,6 +1,6 @@
 +++
 title = 'RED & GOLD'
-date = 2024-11-11T22:36:28-08:00
+date = 2024-11-11T22:58:19-08:00
 media = 'Embroidery on Linen'
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -15,7 +15,7 @@ media = 'Embroidery on Linen'
 series = ['cool']
 dimensions = "20 X 24 framed"
 [[resources]]
-  src = ""
+  src = "Red & Gold Waves - Hunter.webp"
   title = "RED & GOLD"
   [resources.params]
   date = ""

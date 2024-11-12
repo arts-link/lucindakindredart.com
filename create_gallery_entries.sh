@@ -54,9 +54,11 @@ while IFS=, read -r csv_filename title dim; do
     # Set the environment variables
     export HUGO_TITLE="$title"
     export HUGO_DIMENSIONS="$dim"
+    export HUGO_IMAGE_NAME="$csv_filename"
 
     # Output debug information
     echo "Processing file: $file"
+    echo "CSV filename: $csv_filename"
     echo "Sanitized name: $sanitized_name"
     echo "Title: $HUGO_TITLE"
     echo "Dimensions: $HUGO_DIMENSIONS"
@@ -76,6 +78,14 @@ while IFS=, read -r csv_filename title dim; do
     cp "$file" "content$BASE_DIR/$sanitized_name/"
 
     echo "Created gallery entry for $sanitized_name and copied image file."
+    echo "----------------------------------------"
+    echo "----------------------------------------"
+    echo "----------------------------------------"
+    echo "----------------------------------------"
+    echo ""
+    echo ""
+    echo ""
+
 
     # Clear environment variables after use
     unset HUGO_TITLE HUGO_DIMENSIONS
