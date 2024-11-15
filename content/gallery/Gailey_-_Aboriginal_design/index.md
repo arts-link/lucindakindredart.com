@@ -1,6 +1,6 @@
 +++
 title = 'ABORIGINAL DESIGN'
-date = 2024-11-11T22:58:17-08:00
+date = 2024-11-15T15:44:37-08:00
 media = 'Embroidery on Linen'
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -12,8 +12,10 @@ media = 'Embroidery on Linen'
 # sort_by = # name or date
 # weight = # sort weight
 # sort_order = # default is asc
-series = ['cool']
+series = ["cool"]
 dimensions = "12 X 14"
+src = "Gailey - Aboriginal design.webp"
+from_csv = true
 [[resources]]
   src = "Gailey - Aboriginal design.webp"
   title = "ABORIGINAL DESIGN"

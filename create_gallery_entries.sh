@@ -11,7 +11,7 @@ CSV_FILE="cindy-website.csv"
 echo "Target directory is: $TARGET_DIR"
 
 # basedir within content
-BASE_DIR="/gallery"
+BASE_DIR="gallery"
 
 # Check if the target directory exists
 if [ ! -d "$TARGET_DIR" ]; then
@@ -53,8 +53,10 @@ while IFS=, read -r csv_filename title dim; do
     dim=$(echo "$dim" | tr -d '\n' | sed -e 's/\r//g')
     # Set the environment variables
     export HUGO_TITLE="$title"
+    export HUGO_SERIES='["cool"]'
     export HUGO_DIMENSIONS="$dim"
     export HUGO_IMAGE_NAME="$csv_filename"
+    export HUGO_FROM_CSV='true'
 
     # Output debug information
     echo "Processing file: $file"
@@ -65,7 +67,7 @@ while IFS=, read -r csv_filename title dim; do
     echo "Creating Hugo content entry: content$BASE_DIR/$sanitized_name/index.md"
 
     # Create the new Hugo content entry
-    hugo new "content$BASE_DIR/$sanitized_name/index.md"
+    hugo new "$BASE_DIR/$sanitized_name" --kind gallery
 
     # Check if the Hugo command succeeded
     if [ $? -ne 0 ]; then
@@ -74,8 +76,8 @@ while IFS=, read -r csv_filename title dim; do
     fi
 
     # Copy the image file into the new directory
-    echo "Copying $file to content$BASE_DIR/$sanitized_name/"
-    cp "$file" "content$BASE_DIR/$sanitized_name/"
+    echo "Copying $file to content/$BASE_DIR/$sanitized_name/"
+    cp "$file" "content/$BASE_DIR/$sanitized_name/"
 
     echo "Created gallery entry for $sanitized_name and copied image file."
     echo "----------------------------------------"
@@ -88,5 +90,64 @@ while IFS=, read -r csv_filename title dim; do
 
 
     # Clear environment variables after use
-    unset HUGO_TITLE HUGO_DIMENSIONS
+    unset HUGO_TITLE HUGO_DIMENSIONS HUGO_IMAGE_NAME HUGO_FROM_CSV HUGO_SERIES
 done < "$CSV_FILE"
+
+
+echo "STARTING DIRECTORIES LOOP"
+    echo "***************************"
+    echo "***************************"
+    echo "***************************"
+    echo "***************************"
+    echo ""
+    echo ""
+    echo ""
+
+# Loop through the target directory directly (after CSV processing)
+for file in "$TARGET_DIR"/*; do
+    # Skip if it's not a file (e.g., a directory)
+    if [ ! -f "$file" ]; then
+        continue
+    fi
+
+    # Extract the base name of the file (without extension)
+    filename=$(basename "$file")
+    name="${filename%.*}"
+
+    # Sanitize the name
+    sanitized_name=$(echo "$name" | sed -e 's/ /_/g' -e 's/&/and/g' -e 's/[^a-zA-Z0-9_-]//g')
+
+    # Check if the Hugo content already exists for this file
+    if [ -d "content/$BASE_DIR/$sanitized_name" ]; then
+        echo "Content already exists for $sanitized_name, skipping."
+        continue
+    fi
+
+    # export HUGO_TITLE="$sanitized_name"
+    export HUGO_IMAGE_NAME="$filename"
+
+    # Create the new Hugo content entry using filename without extension
+    echo "Creating Hugo content entry for $sanitized_name"
+    hugo new "$BASE_DIR/$sanitized_name" --kind gallery
+
+    # Check if the Hugo command succeeded
+    if [ $? -ne 0 ]; then
+        echo "Failed to create Hugo content entry for $sanitized_name"
+        continue
+    fi
+
+    # Copy the image file into the new directory
+    echo "Copying $file to content/$BASE_DIR/$sanitized_name/"
+    cp "$file" "content/$BASE_DIR/$sanitized_name/"
+
+    echo "Created gallery entry for $sanitized_name and copied image file."
+    echo "***************************"
+    echo "***************************"
+    echo "***************************"
+    echo "***************************"
+    echo ""
+    echo ""
+    echo ""
+    
+    unset HUGO_TITLE HUGO_IMAGE_NAME
+done
