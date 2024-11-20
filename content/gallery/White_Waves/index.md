@@ -1,6 +1,6 @@
 +++
-title = ""
-date = 2024-11-19T22:10:43-08:00
+title = "White Waves - DUPLICATE 71"
+date = 2024-11-19T22:59:12-08:00
 media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -13,9 +13,15 @@ media = "Embroidery on Linen"
 # weight = # sort weight
 # sort_order = # default is asc
 src = "White Waves.webp"
+dimensions = "12 X 14"
+series = ["warm"]
+exhibited = "no"
+date_created = "2022"
+buyer = "REDACTED"
+from_csv = true
 [[resources]]
   src = "White Waves.webp"
-  title = ""
+  title = "White Waves - DUPLICATE 71"
   [resources.params]
   date = ""
 

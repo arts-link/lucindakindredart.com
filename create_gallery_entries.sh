@@ -29,11 +29,13 @@ fi
 while IFS=, read -r csv_filename title dimensions series exhibited date_created buyer price; do
     # Skip header row or empty lines
     if [[ "$csv_filename" == "filename" ]] || [[ -z "$csv_filename" ]]; then
+        echo "Skipping header row or empty line."
         continue
     fi
 
-    # Replace .jpeg with .webp for filename matching
+    # Replace .jpeg or .jpg with .webp for filename matching
     csv_filename="${csv_filename%.jpeg}.webp"
+
     file="$TARGET_DIR/$csv_filename"
 
     # Skip if the file doesn't exist with .webp extension
