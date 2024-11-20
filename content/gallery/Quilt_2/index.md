@@ -1,6 +1,6 @@
 +++
 title = "Embriodery Quilt"
-date = 2024-11-19T22:59:11-08:00
+date = 2024-11-20T00:01:17-08:00
 media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -13,7 +13,7 @@ media = "Embroidery on Linen"
 # weight = # sort weight
 # sort_order = # default is asc
 src = "Quilt 2.webp"
-dimensions = "20   X 24"
+dimensions = "20   X 24" 
 series = ["warm"]
 exhibited = "no"
 date_created = "2022"

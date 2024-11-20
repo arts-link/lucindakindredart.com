@@ -20,7 +20,8 @@ src = "{{ getenv "HUGO_IMAGE_NAME" }}"
 dimensions = "{{ getenv "HUGO_DIMENSIONS" }}"
 {{- end }}
 {{- if getenv "HUGO_SERIES" }}
-series = [{{ printf "%q" (getenv "HUGO_SERIES") }}]
+{{- $seriesList := split (getenv "HUGO_SERIES") "|" }} 
+series = [{{ range $index, $series := $seriesList }}{{ if $index }}, {{ end }}"{{ $series }}"{{ end }}]
 {{- end }}
 {{- if getenv "HUGO_EXHIBITED" }}
 exhibited = "{{ getenv "HUGO_EXHIBITED" }}"

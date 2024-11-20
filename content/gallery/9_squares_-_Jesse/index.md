@@ -1,6 +1,6 @@
 +++
 title = "9 Squares"
-date = 2024-11-19T22:59:08-08:00
+date = 2024-11-20T00:01:14-08:00
 media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -13,8 +13,8 @@ media = "Embroidery on Linen"
 # weight = # sort weight
 # sort_order = # default is asc
 src = "9 squares - Jesse.webp"
-dimensions = "14 X 14"
-series = ["cool"]
+dimensions = "14 X 14" 
+series = ["cool", "squares"]
 exhibited = "no"
 date_created = "2023"
 buyer = "REDACTED"
