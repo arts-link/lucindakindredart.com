@@ -1,6 +1,6 @@
 +++
 title = "Six Orbs"
-date = 2024-11-20T00:01:15-08:00
+date = 2024-11-20T12:08:36-08:00
 media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -13,9 +13,10 @@ media = "Embroidery on Linen"
 # weight = # sort weight
 # sort_order = # default is asc
 src = "IMG_4986.webp"
-dimensions = "10X12" 
-series = ["Warm"]
-exhibited = "YEs"
+dimensions = "10X12"
+  series = ["Warm"]
+    exhibitions = ["Sprague"]
+  exhibited = "Sprague"
 date_created = "2024"
 price = "525"
 from_csv = true

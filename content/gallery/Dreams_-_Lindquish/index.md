@@ -1,6 +1,6 @@
 +++
 title = "Dreaming"
-date = 2024-11-20T00:01:14-08:00
+date = 2024-11-20T12:05:10-08:00
 media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -13,9 +13,9 @@ media = "Embroidery on Linen"
 # weight = # sort weight
 # sort_order = # default is asc
 src = "Dreams - Lindquish.webp"
-dimensions = "10 X 12 & 12 X 14" 
-series = ["cool", "dreaming"]
-exhibited = "no"
+dimensions = "10 X 12 & 12 X 14"
+  series = ["cool", "dreaming"]
+  exhibited = "no"
 date_created = "2024"
 price = "375"
 buyer = "REDACTED"

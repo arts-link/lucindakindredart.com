@@ -4,6 +4,9 @@ date = 2024-10-29T12:49:15-07:00
 layout = 'page'
 private = true
 [menus]
+  [menus.main]
+    weight = 5
+    name = 'About Cindy'
   [menus.footer]
     weight = 1
     name = 'About'

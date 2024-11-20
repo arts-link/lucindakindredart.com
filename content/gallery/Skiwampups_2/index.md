@@ -1,6 +1,6 @@
 +++
 title = "Skiwampus"
-date = 2024-11-20T00:01:17-08:00
+date = 2024-11-20T12:28:12-08:00
 media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -13,9 +13,10 @@ media = "Embroidery on Linen"
 # weight = # sort weight
 # sort_order = # default is asc
 src = "Skiwampups 2.webp"
-dimensions = "12 X 1" 
-series = ["cool"]
-exhibited = "yes"
+dimensions = "12 X 1"
+  series = ["cool"]
+    exhibitions = ["SLCC"]
+  exhibited = "SLCC"
 date_created = "2023"
 price = "300"
 from_csv = true

@@ -1,6 +1,6 @@
 +++
 title = "Nine Green Cricles"
-date = 2024-11-20T00:01:14-08:00
+date = 2024-11-20T12:00:56-08:00
 media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -13,9 +13,10 @@ media = "Embroidery on Linen"
 # weight = # sort weight
 # sort_order = # default is asc
 src = "9 Green Circles.webp"
-dimensions = "12 X 12" 
-series = ["cool"]
-exhibited = "yes"
+dimensions = "12 X 12"
+  series = ["cool"]
+    exhibitions = ["EHC"]
+  exhibited = "EHC"
 date_created = "2023 & 2024"
 price = "300"
 buyer = "REDACTED"

@@ -19,13 +19,25 @@ src = "{{ getenv "HUGO_IMAGE_NAME" }}"
 {{- if getenv "HUGO_DIMENSIONS" }}
 dimensions = "{{ getenv "HUGO_DIMENSIONS" }}"
 {{- end }}
+
 {{- if getenv "HUGO_SERIES" }}
-{{- $seriesList := split (getenv "HUGO_SERIES") "|" }} 
-series = [{{ range $index, $series := $seriesList }}{{ if $index }}, {{ end }}"{{ $series }}"{{ end }}]
+  {{- $seriesList := split (getenv "HUGO_SERIES") "|" }}
+  series = [{{ range $index, $series := $seriesList }}{{ if $index }}, {{ end }}"{{ $series }}"{{ end }}]
 {{- end }}
 {{- if getenv "HUGO_EXHIBITED" }}
-exhibited = "{{ getenv "HUGO_EXHIBITED" }}"
+  {{- $seriesList := split (getenv "HUGO_EXHIBITED") "|" }}
+  {{- $hasNo := false }}
+  {{- range $seriesList }}
+    {{- if eq (lower .) "no" }}
+      {{- $hasNo = true }}
+    {{- end }}
+  {{- end }}
+  {{- if not $hasNo }}
+    exhibitions = [{{ range $index, $series := $seriesList }}{{ if $index }}, {{ end }}"{{ $series }}"{{ end }}]
+  {{- end }}
+  exhibited = "{{ getenv "HUGO_EXHIBITED" }}"
 {{- end }}
+
 {{- if getenv "HUGO_DATE_CREATED" }}
 date_created = "{{ getenv "HUGO_DATE_CREATED" }}"
 {{- end }}

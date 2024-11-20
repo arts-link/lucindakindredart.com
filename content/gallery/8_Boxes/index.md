@@ -1,6 +1,6 @@
 +++
 title = "Eight Squares"
-date = 2024-11-20T00:01:14-08:00
+date = 2024-11-20T12:00:56-08:00
 media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -13,9 +13,9 @@ media = "Embroidery on Linen"
 # weight = # sort weight
 # sort_order = # default is asc
 src = "8 Boxes.webp"
-dimensions = "12 X 20" 
-series = ["cool", "squares"]
-exhibited = "no"
+dimensions = "12 X 20"
+  series = ["cool", "squares"]
+  exhibited = "no"
 date_created = "2024"
 buyer = "REDACTED"
 from_csv = true

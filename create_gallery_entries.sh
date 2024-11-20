@@ -7,7 +7,7 @@ if [ -z "$1" ]; then
 fi
 
 TARGET_DIR="$1"
-CSV_FILE="art.csv"
+CSV_FILE="cindy-website-inventory-clean.csv"
 echo "Target directory is: $TARGET_DIR"
 
 # basedir within content

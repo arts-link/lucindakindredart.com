@@ -1,6 +1,6 @@
 +++
 title = "White Waves -"
-date = 2024-11-20T00:01:16-08:00
+date = 2024-11-20T12:28:11-08:00
 media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -13,9 +13,9 @@ media = "Embroidery on Linen"
 # weight = # sort weight
 # sort_order = # default is asc
 src = "Osborn.webp"
-dimensions = "21 X 16" 
-series = ["warm"]
-exhibited = "NO"
+dimensions = "21 X 16"
+  series = ["warm"]
+  exhibited = "NO"
 date_created = "2022"
 buyer = "REDACTED"
 from_csv = true
