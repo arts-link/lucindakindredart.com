@@ -1,7 +1,7 @@
 +++
-title = 'WOOL FANS'
-date = 2024-11-15T15:44:36-08:00
-media = 'Embroidery on Linen'
+title = "wool fans"
+date = 2024-11-19T22:10:39-08:00
+media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
 # draft = true
@@ -12,13 +12,17 @@ media = 'Embroidery on Linen'
 # sort_by = # name or date
 # weight = # sort weight
 # sort_order = # default is asc
-series = ["cool"]
-dimensions = "8 X 10 framed"
 src = "Adena - wool fans.webp"
+dimensions = "10X12"
+series = ["warm"]
+exhibited = "NO"
+date_created = "2022"
+price = "175"
+buyer = "REDACTED"
 from_csv = true
 [[resources]]
   src = "Adena - wool fans.webp"
-  title = "WOOL FANS"
+  title = "wool fans"
   [resources.params]
   date = ""
 

@@ -1,7 +1,7 @@
 +++
-title = 'RED WHITE & BLUE'
-date = 2024-11-15T15:44:38-08:00
-media = 'Embroidery on Linen'
+title = "Red Yellow and Blue"
+date = 2024-11-19T22:10:42-08:00
+media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
 # draft = true
@@ -12,13 +12,16 @@ media = 'Embroidery on Linen'
 # sort_by = # name or date
 # weight = # sort weight
 # sort_order = # default is asc
-series = ["cool"]
-dimensions = "8 X 8"
 src = "Red-Yellow-Blue.webp"
+dimensions = "10 X 10"
+series = ["warm"]
+exhibited = "no"
+date_created = "2022"
+buyer = "REDACTED"
 from_csv = true
 [[resources]]
   src = "Red-Yellow-Blue.webp"
-  title = "RED WHITE & BLUE"
+  title = "Red Yellow and Blue"
   [resources.params]
   date = ""
 

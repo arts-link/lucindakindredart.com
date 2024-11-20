@@ -1,7 +1,7 @@
 +++
-title = 'CIRCLES WITH FLAMINGO'
-date = 2024-11-15T15:44:36-08:00
-media = 'Embroidery on Linen'
+title = "Circles with Flamingo"
+date = 2024-11-19T22:10:40-08:00
+media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
 # draft = true
@@ -12,13 +12,16 @@ media = 'Embroidery on Linen'
 # sort_by = # name or date
 # weight = # sort weight
 # sort_order = # default is asc
-series = ["cool"]
-dimensions = "10 X 12"
 src = "Crystal Young.webp"
+dimensions = "12 X 14"
+series = ["warm"]
+exhibited = "No"
+date_created = "2023"
+buyer = "REDACTED"
 from_csv = true
 [[resources]]
   src = "Crystal Young.webp"
-  title = "CIRCLES WITH FLAMINGO"
+  title = "Circles with Flamingo"
   [resources.params]
   date = ""
 

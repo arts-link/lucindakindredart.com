@@ -1,7 +1,7 @@
 +++
-title = '{{ getenv "HUGO_TITLE" }}'
+title = "{{ getenv "HUGO_TITLE" }}"
 date = {{ .Date }}
-media = 'Embroidery on Linen'
+media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
 # draft = true
@@ -12,11 +12,28 @@ media = 'Embroidery on Linen'
 # sort_by = # name or date
 # weight = # sort weight
 # sort_order = # default is asc
-{{- if getenv "HUGO_SERIES" }}
-series = {{ getenv "HUGO_SERIES" }}
-{{- end }}
-dimensions = "{{ getenv "HUGO_DIMENSIONS" }}"
+
+{{- if getenv "HUGO_IMAGE_NAME" }}
 src = "{{ getenv "HUGO_IMAGE_NAME" }}"
+{{- end }}
+{{- if getenv "HUGO_DIMENSIONS" }}
+dimensions = "{{ getenv "HUGO_DIMENSIONS" }}"
+{{- end }}
+{{- if getenv "HUGO_SERIES" }}
+series = [{{ printf "%q" (getenv "HUGO_SERIES") }}]
+{{- end }}
+{{- if getenv "HUGO_EXHIBITED" }}
+exhibited = "{{ getenv "HUGO_EXHIBITED" }}"
+{{- end }}
+{{- if getenv "HUGO_DATE_CREATED" }}
+date_created = "{{ getenv "HUGO_DATE_CREATED" }}"
+{{- end }}
+{{- if getenv "HUGO_PRICE" }}
+price = "{{ getenv "HUGO_PRICE" }}"
+{{- end }}
+{{- if getenv "HUGO_BUYER" }}
+buyer = "REDACTED"
+{{- end }}
 {{- if getenv "HUGO_FROM_CSV" }}
 from_csv = {{ getenv "HUGO_FROM_CSV" }}
 {{- end }}

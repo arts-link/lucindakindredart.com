@@ -1,7 +1,7 @@
 +++
-title = ''
-date = 2024-11-15T15:44:40-08:00
-media = 'Embroidery on Linen'
+title = "Eight Squares"
+date = 2024-11-19T22:10:41-08:00
+media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
 # draft = true
@@ -12,11 +12,16 @@ media = 'Embroidery on Linen'
 # sort_by = # name or date
 # weight = # sort weight
 # sort_order = # default is asc
-dimensions = ""
 src = "Jess - Hunter's mother.webp"
+dimensions = "12 X 16"
+series = ["cool"]
+exhibited = "yes"
+date_created = "2023"
+price = "750"
+from_csv = true
 [[resources]]
   src = "Jess - Hunter's mother.webp"
-  title = ""
+  title = "Eight Squares"
   [resources.params]
   date = ""
 

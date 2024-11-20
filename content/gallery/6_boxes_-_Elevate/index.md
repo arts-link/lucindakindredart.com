@@ -1,7 +1,7 @@
 +++
-title = 'SIX BOXES'
-date = 2024-11-15T15:44:36-08:00
-media = 'Embroidery on Linen'
+title = "Six Boxes"
+date = 2024-11-19T22:10:39-08:00
+media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
 # draft = true
@@ -12,13 +12,15 @@ media = 'Embroidery on Linen'
 # sort_by = # name or date
 # weight = # sort weight
 # sort_order = # default is asc
-series = ["cool"]
-dimensions = "12 X 14 framed"
 src = "6 boxes - Elevate.webp"
+dimensions = "12X14"
+series = ["cool"]
+exhibited = "no"
+date_created = "2023"
 from_csv = true
 [[resources]]
   src = "6 boxes - Elevate.webp"
-  title = "SIX BOXES"
+  title = "Six Boxes"
   [resources.params]
   date = ""
 

@@ -7,7 +7,7 @@ if [ -z "$1" ]; then
 fi
 
 TARGET_DIR="$1"
-CSV_FILE="cindy-website.csv"
+CSV_FILE="art.csv"
 echo "Target directory is: $TARGET_DIR"
 
 # basedir within content
@@ -26,7 +26,7 @@ if [ ! -f "$CSV_FILE" ]; then
 fi
 
 # Loop through each file in the target directory
-while IFS=, read -r csv_filename title dim; do
+while IFS=, read -r csv_filename title dimensions series exhibited date_created buyer price; do
     # Skip header row or empty lines
     if [[ "$csv_filename" == "filename" ]] || [[ -z "$csv_filename" ]]; then
         continue
@@ -45,25 +45,39 @@ while IFS=, read -r csv_filename title dim; do
     # Extract the base name of the file (without extension)
     filename=$(basename "$file")
     name="${filename%.*}"
-
     # Sanitize the name: replace spaces with underscores, "&" with "and", and remove non-alphanumeric characters except "-"
     sanitized_name=$(echo "$name" | sed -e 's/ /_/g' -e 's/&/and/g' -e 's/[^a-zA-Z0-9_-]//g')
+    # Clean up any newline characters in dimensions
+    title=$(echo "$title" | tr -d '\n' | sed -e 's/\r//g')
+    dimensions=$(echo "$dimensions" | tr -d '\n' | sed -e 's/\r//g')
+    series=$(echo "$series" | tr -d '\n' | sed -e 's/\r//g')
+    exhibited=$(echo "$exhibited" | tr -d '\n' | sed -e 's/\r//g')
+    date_created=$(echo "$date_created" | tr -d '\n' | sed -e 's/\r//g')
+    buyer=$(echo "$buyer" | tr -d '\n' | sed -e 's/\r//g')
+    price=$(echo "$price" | tr -d '\n' | sed -e 's/\r//g')
 
-    # Clean up any newline characters in dim
-    dim=$(echo "$dim" | tr -d '\n' | sed -e 's/\r//g')
     # Set the environment variables
-    export HUGO_TITLE="$title"
-    export HUGO_SERIES='["cool"]'
-    export HUGO_DIMENSIONS="$dim"
     export HUGO_IMAGE_NAME="$csv_filename"
-    export HUGO_FROM_CSV='true'
+    export HUGO_TITLE="$title"
+    export HUGO_DIMENSIONS="$dimensions"
+    export HUGO_SERIES="$series"
+    export HUGO_EXHIBITED="$exhibited"
+    export HUGO_DATE_CREATED="$date_created"
+    export HUGO_BUYER="$buyer"
+    export HUGO_PRICE="$price"
+    export HUGO_FROM_CSV="true"
 
     # Output debug information
     echo "Processing file: $file"
-    echo "CSV filename: $csv_filename"
-    echo "Sanitized name: $sanitized_name"
-    echo "Title: $HUGO_TITLE"
-    echo "Dimensions: $HUGO_DIMENSIONS"
+    echo "HUGO_IMAGE_NAME: $csv_filename"
+    echo "DIRECTORY NAME (sanity now): $sanitized_name"
+    echo "HUGO_TITLE: $HUGO_TITLE"
+    echo "HUGO_DIMENSIONS: $HUGO_DIMENSIONS"
+    echo "HUGO_SERIES: $HUGO_SERIES"
+    echo "HUGO_EXHIBITED: $HUGO_EXHIBITED"
+    echo "HUGO_DATE_CREATED: $HUGO_DATE_CREATED"
+    echo "HUGO_BUYER: $HUGO_BUYER"
+    echo "HUGO_PRICE: $HUGO_PRICE"
     echo "Creating Hugo content entry: content$BASE_DIR/$sanitized_name/index.md"
 
     # Create the new Hugo content entry
@@ -88,9 +102,8 @@ while IFS=, read -r csv_filename title dim; do
     echo ""
     echo ""
 
-
     # Clear environment variables after use
-    unset HUGO_TITLE HUGO_DIMENSIONS HUGO_IMAGE_NAME HUGO_FROM_CSV HUGO_SERIES
+    unset HUGO_IMAGE_NAME HUGO_TITLE HUGO_DIMENSIONS HUGO_SERIES HUGO_EXHIBITED HUGO_DATE_CREATED HUGO_BUYER HUGO_PRICE HUGO_FROM_CSV
 done < "$CSV_FILE"
 
 

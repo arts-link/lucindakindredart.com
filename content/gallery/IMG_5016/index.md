@@ -1,7 +1,7 @@
 +++
-title = ''
-date = 2024-11-15T15:44:40-08:00
-media = 'Embroidery on Linen'
+title = ""
+date = 2024-11-19T22:10:43-08:00
+media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
 # draft = true
@@ -12,7 +12,6 @@ media = 'Embroidery on Linen'
 # sort_by = # name or date
 # weight = # sort weight
 # sort_order = # default is asc
-dimensions = ""
 src = "IMG_5016.webp"
 [[resources]]
   src = "IMG_5016.webp"

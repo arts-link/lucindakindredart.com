@@ -1,7 +1,7 @@
 +++
-title = 'GOLDEN WAVES'
-date = 2024-11-15T15:44:37-08:00
-media = 'Embroidery on Linen'
+title = "Golden Waves"
+date = 2024-11-19T22:10:40-08:00
+media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
 # draft = true
@@ -12,13 +12,16 @@ media = 'Embroidery on Linen'
 # sort_by = # name or date
 # weight = # sort weight
 # sort_order = # default is asc
-series = ["cool"]
-dimensions = "18 X 25 framed"
 src = "IMG_1007 Lucinda Kindred.webp"
+dimensions = "16 X 20"
+series = ["warm"]
+exhibited = "yes"
+date_created = "2023"
+price = "695"
 from_csv = true
 [[resources]]
   src = "IMG_1007 Lucinda Kindred.webp"
-  title = "GOLDEN WAVES"
+  title = "Golden Waves"
   [resources.params]
   date = ""
 

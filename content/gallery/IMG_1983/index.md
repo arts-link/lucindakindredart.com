@@ -1,7 +1,7 @@
 +++
-title = 'SUNBURST'
-date = 2024-11-15T15:44:38-08:00
-media = 'Embroidery on Linen'
+title = "Sunburst"
+date = 2024-11-19T22:10:40-08:00
+media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
 # draft = true
@@ -12,13 +12,16 @@ media = 'Embroidery on Linen'
 # sort_by = # name or date
 # weight = # sort weight
 # sort_order = # default is asc
-series = ["cool"]
-dimensions = "12 X 16"
 src = "IMG_1983.webp"
+dimensions = "14 X 16"
+series = ["warm"]
+exhibited = "yes"
+date_created = "2024"
+price = "675"
 from_csv = true
 [[resources]]
   src = "IMG_1983.webp"
-  title = "SUNBURST"
+  title = "Sunburst"
   [resources.params]
   date = ""
 
