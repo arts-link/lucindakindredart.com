@@ -4,9 +4,9 @@ title = "Lucinda Kindred Art"
 [author]
   email = "lucinkin@gmail.com"
   name = "Lucinda Kindred"
-[socialIcons]
+# [socialIcons]
   # facebook = "https://www.facebook.com/"
-  email = "mailto:lucinkin@gmail.com"
+  # email = "mailto:lucinkin@gmail.com"
   #instagram = "https://www.instagram.com/"
   #github = "https://github.com/nicokaiser/hugo-theme-gallery/"
   #youtube = "https://www.youtube.com/"
