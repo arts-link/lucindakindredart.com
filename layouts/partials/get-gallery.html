@@ -24,10 +24,10 @@
   {{ if .IsPage }}
     {{ $imageCount = len $images }}
   {{ else }}
-    {{ range where .RegularPagesRecursive "Params.private" "ne" true }}
+    {{/*  {{ range where .RegularPagesRecursive "Params.private" "ne" true }}
       {{ $albumCount = add $albumCount 1 }}
       {{ $imageCount = add $imageCount (len (.Resources.ByType "image")) }}
-    {{ end }}
+    {{ end }}  */}}
   {{ end }}
   {{ $gallery = dict
     "page" $

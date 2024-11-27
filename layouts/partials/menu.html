@@ -1,29 +1,44 @@
   <menu class="" id="menu">
+    <nav class="main">
+
     <ul>
-{{ with site.Menus.main }}
-    {{ range $index, $item := . }}
-      {{/*  {{ isAncestor . $item }}  */}}
-      
-      <li 
-        class="{{ if eq $index 0 }}left{{ else }}right{{ end }}" 
-        itemscope 
-        itemtype="http://www.schema.org/SiteNavigationElement"
-      >
-      {{ $supCuz := false }}
-      {{ if gt $index 0 }}
-        {{ range page.Ancestors }}
-          {{ if eq .Title $item.Name }}
-            {{ $supCuz = true }}
+      {{ with site.Menus.main }}
+        {{ range $index, $item := . }}
+          {{/*  {{ isAncestor . $item }}  */}}
+          
+          <li 
+            class="{{ if eq $index 0 }}left{{ else }}right{{ end }}" 
+            itemscope 
+            itemtype="http://www.schema.org/SiteNavigationElement"
+          >
+          {{ $supCuz := false }}
+          {{ if gt $index 0 }}
+            {{ range page.Ancestors }}
+              {{ if eq .Title $item.Name }}
+                {{ $supCuz = true }}
+              {{ end }}
+            {{ end }}
           {{ end }}
+            <a aria-current="{{ or (page.IsMenuCurrent $item.Menu $item) (page.HasMenuCurrent $item.Menu $item) $supCuz }}" href="{{ $item.URL }}" itemprop="url">
+              <span itemprop="name">{{ $item.Name }}</span>
+            </a>
+          </li>
         {{ end }}
       {{ end }}
-        <a aria-current="{{ or (page.IsMenuCurrent $item.Menu $item) (page.HasMenuCurrent $item.Menu $item) $supCuz }}" href="{{ $item.URL }}" itemprop="url">
-          <span itemprop="name">{{ $item.Name }}</span>
-        </a>
-      </li>
-    {{ end }}
-{{ end }}
     </ul>
-    {{/*  [{{ .Data.Singular }}]::[{{ .Data.Plural}}]  */}}
-    {{ partial "categories.html" (dict "taxonomy" .Data.Plural "page" . ) }}
+
+    </nav>
+    {{ if eq .Section "about" }}
+      <nav class="categories">
+        <ul>
+        {{ range site.Menus.meta }}
+          <li>
+            <a href="{{ .URL }}">{{ .Name }}</a>
+          </li>
+        {{ end }}
+        </ul>
+      </nav>
+    {{ else }}
+      {{ partial "categories.html" (dict "taxonomy" .Data.Plural "page" . ) }}
+    {{ end }}
   </menu>

@@ -4,6 +4,9 @@ date = '2024-11-26T12:48:15-08:00'
 title = 'Art with Purpose: Supporting Lockhart River Arts'
 linkTitle = 'Support'
 [menus]
+  [menus.meta]
+    weight = 20
+    name = 'About Lockhart River Arts'
   [menus.footer]
     weight = 10
     name = 'Support'

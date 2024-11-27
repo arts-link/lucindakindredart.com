@@ -14,7 +14,7 @@ media = "textiles"
 # sort_order = # default is asc
 src = "Pillow 1b.webp"
 dimensions = "16 x 16"
-  series = ["textiles"]
+  series = ["all","textiles"]
 from_csv = true
 [[resources]]
   src = "Pillow 1b.webp"

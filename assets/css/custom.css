@@ -5,57 +5,6 @@ body {
   /* background-size: auto; */
 }
 
-/* Default styles for categories */
-nav.categories {
-  padding-right: 0rem;
-  padding-left: 0rem;
-  margin: 1rem auto 3rem;
-}
-
-nav.categories > ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center; /* Center by default */
-  gap: 0.75rem;
-  flex-wrap: wrap;
-}
-
-nav.categories > ul li {
-  max-width: 100%;
-}
-
-nav.categories > ul li > a {
-  display: block;
-  padding: 0.5rem 0.75rem;
-  border-radius: 0.375rem;  
-  border: 1px solid var(--border);
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-  @media (min-width: 640px) {
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
-  }
-}
-
-nav.categories > ul li > a:hover {
-  background-color: var(--hover);
-  border-color: var(--text-2);
-  color: var(--text-1);
-}
-
-/* Right align categories when inside <menu> */
-menu nav.categories {
-  text-align: right;
-}
-
-menu nav.categories > ul {
-  justify-content: flex-end; /* Right-align the items inside the <menu> */
-}
-
 .button-class {
   background-color: #f5f5f5;
   color: #333333;
@@ -223,61 +172,125 @@ menu nav.categories > ul {
     font-weight: bold;
   }
 }
+body {
+  > menu {
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    width: 100%;
+    display: block; 
+    box-sizing: border-box;
 
-body > menu {
-  margin: 3rem auto;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
-  width: 100%;
-  display: block; /* Set the menu to block-level */
-  box-sizing: border-box;
-}
+    nav.categories {
+      text-align: right;
+      background-color: #2f4f4f;
+      padding: 1.5rem 1.5rem;
+      margin: 0 auto 0;
+  
+      > ul {
+        justify-content: flex-end; 
+      }
+    }
+    
+    nav.main {
+      padding: 0rem 1.5rem;
+    }
 
-body > menu > ul {
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-between; /* Space between left and right groups */
-  align-items: center; /* Ensure vertical alignment is consistent */
-  list-style: none; /* Remove default list styling */
-  margin: 0; /* Remove default margin from ul */
-  padding: 0; /* Remove default padding from ul */
-  width: 100%;
-}
-body > menu, body > menu > ul {
-  min-width: 100%; /* Force full width on both elements */
-}
-body > menu > ul > li {
-  flex: none; /* Prevent items from stretching */
-}
+    ul {
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      list-style: none; 
+      margin: 0; 
+      /* padding: 1.5rem 1.5rem 0rem; */
+      width: 100%;
 
-body > menu > ul > li.left {
-  margin-right: auto; /* Push the first item to the left */
-}
+      li {
+        flex: none;
 
-body > menu > ul > li.right {
-  margin-left: 1rem; /* Add consistent spacing for right-aligned items */
-}
+        &.left {
+          margin-right: auto;
+        }
 
-body > menu > ul > li a {
-  display: block;
-  border-radius: 0.375rem;
-  background-color: var(--surface-2);
-  border: 1px solid var(--border);
-  color: var(--text-2);
-  padding: 0.5rem 1rem;
-  font-weight: 600;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  text-decoration: none; /* Remove underline */
-  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+        &.right {
+          margin-left: 1rem;
+        }
 
-  &:hover,
-  &[aria-current="true"] {
-    background-color: var(--hover);
-    border-color: var(--text-2);
-    color: var(--text-1);
+        a {
+          display: block;
+          border-radius: 0.375rem;
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+          background-color: var(--surface-2);
+          border: 1px solid var(--border);
+          color: var(--text-2);
+          padding: 0.5rem 1rem;
+          font-weight: 600;
+          font-size: 1rem;
+          line-height: 1.5rem;
+          text-decoration: none;
+          transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+
+          &:hover,
+          &[aria-current="true"] {
+            background-color: var(--hover);
+            border-color: var(--text-2);
+            color: var(--text-1);
+          }
+        }
+      }
+    }
+
+    ul,
+    & {
+      min-width: 100%; 
+    }
   }
 }
 
+nav.categories {
+  padding: 0rem;
+  margin: 1rem auto 3rem;
+
+  > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    gap: 0.75rem;
+    flex-wrap: wrap;
+
+    li {
+      max-width: 100%;
+
+      > a {
+        display: block;
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.375rem;
+        border: 1px solid var(--border);
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @media (min-width: 640px) {
+          padding: 0.75rem 1rem;
+          font-size: 1rem;
+        }
+
+        &:hover {
+          background-color: var(--hover);
+          border-color: var(--text-2);
+          color: var(--text-1);
+        }
+      }
+    }
+  }
+}
+
+
+
+
+/* Footer */
 body > footer {
   margin-right: auto;
   margin-left: auto;

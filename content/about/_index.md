@@ -4,7 +4,7 @@ date = 2024-10-29T12:49:15-07:00
 layout = 'page'
 [menus]
   [menus.main]
-    weight = 50
+    weight = 90
     name = 'About Cindy'
   [menus.footer]
     weight = 1
