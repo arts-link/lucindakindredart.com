@@ -10,52 +10,13 @@
     {{ partial "attribution.html" .}}
   </section>
   <section>
-    <style>
-      .taxonomy-row {
-        display: flex;
-        justify-content: space-between;  /* Distribute columns evenly */
-        gap: 20px;
-        flex-wrap: nowrap;  /* Ensure items stay in a single row */
-        width: 100%;
-      }
-      
-      .taxonomy-column {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        flex: 1;  /* Make each column grow equally */
-      }
-      
-      .taxonomy-header {
-        font-weight: bold;
-        padding-bottom: 10px;
-        font-size: 1.2em;
-        color: #333;
-      }
-      
-      .taxonomy-terms {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-      }
-      
-      .term a {
-        color: #007acc;
-        text-decoration: none;
-      }
-      
-      .term a:hover {
-        text-decoration: underline;
-      }
-    </style>
+    <!-- kept b/c the css i don wanna change -->
+  </section>
+  {{/*  <section>
     <div class="taxonomy-row">
       {{ range $taxonomy, $terms := .Site.Taxonomies }}
         <div class="taxonomy-column">
-          
-          <!-- Taxonomy Name as Column Header -->
           <div class="taxonomy-header"><a href="{{ $terms.Page.RelPermalink }}">{{ $terms.Page.Title | title }}</a></div>
-  
-          <!-- Terms with Count for Each Term -->
           <div class="taxonomy-terms">
             {{ range $term, $pages := $terms }}
               <div class="term">
@@ -66,5 +27,5 @@
         </div>
       {{ end }}
     </div>
-  </section>
+  </section>  */}}
 </footer>

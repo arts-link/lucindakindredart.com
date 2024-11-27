@@ -30,10 +30,18 @@
     </nav>
     {{ if eq .Section "about" }}
       <nav class="categories">
+    {{/*  {{ . | debug.Dump }}  */}}
+    {{/*  {{ . | jsonify (dict "indent" " ") }}  */}}
+    {{/*  {{ .Params | debug.Dump }}  */}}
         <ul>
+        {{ $path := printf "%s/" .Path }}
+        {{/*  [{{ $path }}]:  */}}
         {{ range site.Menus.meta }}
+          {{/*  :[{{ .URL }}]  */}}
           <li>
-            <a href="{{ .URL }}">{{ .Name }}</a>
+            <a aria-current="{{ eq $path .URL }}" href="{{ .URL }}" itemprop="url">
+              <span itemprop="name">{{ .Name }}</span>
+            </a>
           </li>
         {{ end }}
         </ul>
