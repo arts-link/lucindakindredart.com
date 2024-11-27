@@ -1,7 +1,7 @@
 +++
 title = "Pillow"
 date = 2024-11-20T12:28:11-08:00
-media = "Embroidery on Linen"
+media = "textiles"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
 # draft = true

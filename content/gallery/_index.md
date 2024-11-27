@@ -1,9 +1,10 @@
 +++
 date = '2024-11-15T10:54:27-08:00'
 # draft = true
-title = 'All the Things'
+title = 'Gallery'
 [menus]
   [menus.main]
-    weight = 20
+    weight = 40
+    name = "All"
 +++
 Here you have a list of all the taxonomies with content.

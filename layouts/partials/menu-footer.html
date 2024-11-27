@@ -1,0 +1,7 @@
+{{ $len := (len .Site.Menus.footer) }}
+{{ range $index, $element := .Site.Menus.footer }}
+  <a {{ with .Params.rel -}}rel="{{ . }}"{{ end -}} href="{{ .URL }}">
+    {{ .Name }}
+  </a>
+  {{ if ne (add $index 1) $len }}&nbsp;|&nbsp;{{ end }}
+{{ end }}

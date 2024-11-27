@@ -1,0 +1,7 @@
+{{/*  This shows the listing normally assuming each directory is another gallery  */}}
+<section class="galleries">
+  {{ range where .Pages "Params.private" "ne" true }}
+  {{ .Title}}
+    {{ partial "album-card.html" . }}
+  {{ end }}
+</section>

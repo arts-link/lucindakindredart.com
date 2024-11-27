@@ -1,0 +1,19 @@
+{{- define "main" }}
+  {{- partial "title.html" . }}
+  {{ with .Content }}
+  <section class="prose">
+    <p>
+      {{ . }}
+    </p>
+    </section>
+  {{ end }}
+  <section class="galleries">
+    {{ with site.GetPage "taxonomyTerm" (.Section) }}
+      {{ range where .Pages "Params.private" "ne" true }}
+        {{ partial "album-card.html" . }}
+      {{ end }}
+    {{ end }}
+  </section>
+
+
+{{- end }}

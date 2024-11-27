@@ -1,0 +1,15 @@
+<!-- Do a PR for this code -->
+{{ $currLink := .page.Permalink }}
+{{ $taxonomy := .taxonomy }}
+{{ if $taxonomy }}
+{{ with (index site.Taxonomies $taxonomy) }}
+  <nav class="categories">
+    <ul>
+      {{ $isCurrPage := false }}
+      {{ range . }}
+        <li><a aria-current="{{- eq .Page.Permalink $currLink }}" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> </li>
+      {{ end }}
+    </ul>
+  </nav>
+{{ end }}
+{{ end }}

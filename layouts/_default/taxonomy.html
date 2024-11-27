@@ -1,0 +1,11 @@
+{{- define "main" }}
+  {{- partial "title.html" . }}
+  {{ with .Content }}
+  <section class="prose">
+    <p>
+      {{ . }}
+    </p>
+    </section>
+  {{ end }}
+  {{- partial "list-recursive.html" . }}
+{{- end }}

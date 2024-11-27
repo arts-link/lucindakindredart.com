@@ -1,0 +1,114 @@
+{{- define "main" }}
+  {{- partial "title.html" . }}
+  <style>
+    .gallery-index-cell {
+      background-color: #cc8e00; /* Dark yellow background */
+      color: white;              /* White text */
+      border: 2px solid black;   /* Black border */
+      border-radius: 50%;        /* Make it a circle */
+      width: 40px;               /* Set width of the circle */
+      height: 40px;              /* Set height of the circle */
+      display: flex;             /* Use flexbox to center text */
+      align-items: center;       /* Vertically center text */
+      justify-content: center;   /* Horizontally center text */
+      font-size: 16px;           /* Adjust font size if needed */
+    } 
+    .gallery-image-cell a {
+      color: #ddd;
+    }
+    .tracked-cell {
+      background-color: green; /* Dark yellow background */
+    }
+    .gallery-table .gallery-row {
+      border-top: 10px solid #cc8e00;
+    }
+    .gallery-row.tracked-cell {
+      border-top: 10px solid green;
+    }
+  </style>
+  <div class="gallery-table">
+    {{ with site.GetPage "gallery" }}
+      {{- $counter := 1 }}
+      {{- range sort (where .Pages "Params.private" "ne" true) "Params.src" "asc" }}
+        {{ $counterClass := "" }}
+        {{ if .Param "from_csv" }}
+          {{ $counterClass = "tracked-cell" }}
+        {{ end }}
+        <div class="gallery-row {{ $counterClass }}">
+          <div class="gallery-cell gallery-index-cell {{ $counterClass }}">
+            {{- $counter }}
+          </div>
+          {{- $counter = add $counter 1 }}
+          <!-- Images in the first column -->
+          <div class="gallery-cell gallery-image-cell">
+            {{- range .Resources.ByType "image" }}
+            {{ $thumbnail := .Filter (slice images.AutoOrient (images.Process "fit 300x300")) }}
+              <figure style="background-color: {{ index .Colors 0 | default "transparent" }};">
+                <img class="lazyload" width="250" data-src="{{ $thumbnail.RelPermalink }}" alt="{{ .Title }}" />
+                <p style="background-color:#2C2C2C; color:#ddd; padding: .5rem;">
+                  <b>image dimensions</b><br/>
+                  width: {{ .Width }}<br/>
+                  height: {{ .Height }}<br/>
+                  <a href="{{ .RelPermalink }}" target="_blank">View full size</a>
+                </p>
+              </figure>
+            {{- end }}
+          </div>
+          {{- $colsToShow := slice 
+            "title"
+            "dimensions"
+            "media"
+            "series"
+            "exhibitions"
+            "exhibited"
+            "date_created"
+            "buyer"
+            "price"
+            "src"
+        }} 
+        {{- $params := .Params }} <!-- Store .Params in a variable to preserve context -->
+        {{- range $col := $colsToShow }}
+          {{- $value := index $params $col }} <!-- Get the value for $col -->
+          {{- if $value }} <!-- Check if the key exists in .Params -->
+            <div class="gallery-cell param-column">
+              <div class="param-header">{{ $col }}</div>
+              <div class="param-data">
+                {{- if eq $col "date" }}
+                  {{ dateFormat "2006-01-02" $value }}
+                {{- else if eq $col "resources" }}
+                  {{- range $value }}
+                    <b>Source:</b> {{ .src }}<br/>
+                    <b>Title:</b> {{ .title }}<br/>
+                    {{- if .params.date }}
+                      Date: {{ dateFormat "2006-01-02" .params.date }}<br/>
+                    {{- end }}
+                  {{- end }}
+                {{- else if eq $col "series" }}
+                  {{- range $value }}
+                    <a href="{{ $.Site.BaseURL }}series/{{ . | urlize }}">{{ . }}</a><br/>
+                  {{- end }}
+                {{- else if eq $col "media" }}
+                  <a href="{{ $.Site.BaseURL }}media/{{ $value | urlize }}">{{ $value }}</a><br/>
+                {{- else if eq $col "exhibitions" }}
+                  {{- range $value }}
+                    <a href="{{ $.Site.BaseURL }}exhibitions/{{ . | urlize }}">{{ . }}</a><br/>
+                  {{- end }}
+                {{- else }}
+                  {{ $value }}
+                {{- end }}
+              </div> <!-- Display the value -->
+            </div>
+          {{ else}}
+            <div class="gallery-cell param-column">
+              <div class="param-header">{{ $col }}</div>
+              <div class="param-data empty">null</div> <!-- Display the value -->
+            </div>
+          {{- end }}
+        {{- end }}
+        </div>
+      {{- end }}
+    {{- end }}
+  </div>
+
+ 
+{{- end }}
