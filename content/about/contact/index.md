@@ -1,6 +1,6 @@
 +++
 title = 'Contact'
-layomt = 'page'
+layout = 'page'
 [menus]
   [menus.meta]
     weight = 30

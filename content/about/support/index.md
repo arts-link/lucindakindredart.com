@@ -2,6 +2,7 @@
 date = '2024-11-26T12:48:15-08:00'
 # draft = true
 title = 'Art with Purpose: Supporting Lockhart River Arts'
+layout = 'page'
 linkTitle = 'Support'
 [menus]
   [menus.meta]
@@ -12,7 +13,7 @@ linkTitle = 'Support'
     name = 'Support'
 +++
 
-{{< artist-image src="/images/lockhart_logo.png" width="200" title="Lockhart River Arts" >}}
+{{< artist-image src="lockhart_logo.png" width="200" title="Lockhart River Arts" >}}
 
 Cindy Kindred discovered a new purpose for her art after her daughter, Nicole, moved to Australia. Through this connection, she learned about the Lockhart River Arts group and the rich cultural traditions of Australian Aboriginal peoples. Deeply inspired, Cindy decided to dedicate her time and creativity to supporting this community.
 
