@@ -3,6 +3,7 @@
   "baseUrl": ".",
   "paths": {
    "*": [
+    "*",
     "../themes/nico-gallery/assets/*"
    ]
   }

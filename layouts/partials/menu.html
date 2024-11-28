@@ -1,13 +1,12 @@
-  <menu class="" id="menu">
+  {{ $section := .Section }}
+  <menu class="{{ $section }}" id="menu">
     <nav class="main">
 
     <ul>
       {{ with site.Menus.main }}
         {{ range $index, $item := . }}
-          {{/*  {{ isAncestor . $item }}  */}}
-          
           <li 
-            class="{{ if eq $index 0 }}left{{ else }}right{{ end }}" 
+            class="{{ if eq $index 0 }}left{{ else }}right{{ end }} {{ $item.Page.Section }}" 
             itemscope 
             itemtype="http://www.schema.org/SiteNavigationElement"
           >

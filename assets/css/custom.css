@@ -34,84 +34,94 @@ body {
   max-width: 600px;
   margin: 0 auto;
   padding: 2rem;
-  background-color: #f5f5f5;
+  background-color: var(--surface-1);
   border-radius: 0.375rem;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+
+  h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--text-1);
+    text-align: center;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: var(--text-2);
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        color: var(--text-1);
+        font-weight: 500;
+      }
+
+      input,
+      textarea {
+        padding: 0.75rem;
+        font-size: 1rem;
+        border: 1px solid var(--border);
+        border-radius: 0.375rem;
+        background-color: var(--surface-1);
+        color: var(--text-1);
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+        &:focus {
+          border-color: #ffa726; /* Use an accent variable if defined */
+          box-shadow: 0 0 0 2px rgba(255, 167, 38, 0.3);
+          outline: none;
+        }
+      }
+
+      textarea {
+        min-height: 150px;
+        resize: vertical;
+      }
+    }
+  }
+
+  .submit-button {
+    padding: 0.75rem 1.5rem;
+    background-color: var(--surface-2);
+    color: var(--text-1);
+    border: 1px solid var(--border);
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+      background-color: var(--hover);
+      border-color: var(--border);
+      transform: translateY(-2px);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(255, 167, 38, 0.4);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
 }
-
-.contact-form h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #333333;
-}
-
-.contact-form p {
-  font-size: 1rem;
-  margin-bottom: 2rem;
-  color: #666666;
-}
-
-.contact-form__container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.form-group {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group label {
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-  color: #333333;
-}
-
-.form-group input,
-.form-group textarea {
-  padding: 0.75rem;
-  font-size: 1rem;
-  border: 2px solid #d4d4d4;
-  border-radius: 0.375rem;
-  background-color: #ffffff;
-  color: #333333;
-  transition: border-color 0.2s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  border-color: #fbbf24; /* Focus border color */
-  outline: none;
-}
-
-.form-group textarea {
-  min-height: 150px;
-  resize: vertical;
-}
-
-.submit-button {
-  padding: 0.75rem 1.5rem;
-  background-color: #f5f5f5;
-  color: #333333;
-  border: 2px solid #d4d4d4;
-  border-radius: 0.375rem;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.2s ease, border-color 0.2s ease;
-}
-
-.submit-button:hover {
-  background-color: #e5e5e5;
-  border-color: #bdbdbd;
-}
-
-.submit-button:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px #fbbf24;
-}
-
-
 /* FOR THE INVENTORY PAGE */
 .gallery-table {
   a {
@@ -181,6 +191,32 @@ body {
     width: 100%;
     display: block; 
     box-sizing: border-box;
+    
+    nav.main {
+      padding: 1.5rem 1.5rem 0;
+      background-color: #b5d5d5;
+      border-bottom: 2px solid #d2b48c;
+    }
+
+
+    &.about { 
+      ul li.about a:hover, ul li.about a[aria-current=true] {
+        border-color: #A63636;
+      }
+
+      nav.categories {
+        background-color: #A63636;
+      }
+    }
+
+    &.exhibitions {
+      ul li.exhibitions a:hover, ul li.exhibitions a[aria-current=true] {
+        border-color: #2E4E6E;
+      }
+      nav.categories {
+        background-color: #2E4E6E;
+      }
+    }
 
     nav.categories {
       text-align: right;
@@ -192,7 +228,7 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: flex-end; 
-        gap: 0.75rem;
+        gap: 0.5rem;
         flex-wrap: wrap;
     
         li {
@@ -200,7 +236,7 @@ body {
     
           > a {
             display: block;
-            padding: 0.5rem 0.75rem;
+            padding: 0.25rem 0.12rem;
             /* border-radius: 0.375rem; */
             /* border: 1px solid var(--border); */
             border-radius: 0;
@@ -214,7 +250,7 @@ body {
             text-overflow: ellipsis;
     
             @media (min-width: 640px) {
-              padding: 0.75rem 1rem;
+              padding: 0.5rem .25rem;
               font-size: 1rem;
             }
     
@@ -230,11 +266,12 @@ body {
     }
 
     
-    nav.main {
-      padding: 1.5rem 1.5rem 0;
-      background-color: #b5d5d5;
-      border-bottom: 2px solid grey;
-    }
+    body>menu ul li a:hover, body>menu ul li a[aria-current=true] {
+      background-color: var(--hover);
+      border-color: var(--text-2);
+      border-bottom: 0px;
+      color: var(--text-1);
+  }
 
     ul {
       display: flex; 
@@ -263,6 +300,7 @@ body {
           border-bottom-right-radius: 0;
           background-color: var(--surface-2);
           border: 1px solid var(--border);
+          border-bottom: 0px;
           color: var(--text-2);
           padding: 0.5rem 1rem;
           font-weight: 600;
@@ -275,8 +313,15 @@ body {
           &[aria-current="true"] {
             background-color: var(--hover);
             border-color: var(--text-2);
+            border-bottom: 0px;
             color: var(--text-1);
           }
+        }
+        a:hover, a[aria-current=true] {
+          background-color: var(--hover);
+          border-color: var(--text-2);
+          border-bottom: 0px;
+          color: var(--text-1);
         }
       }
     }
@@ -405,9 +450,7 @@ body > footer {
   color: var(--text-1);
   font-size: 1rem;
   line-height: 1.75;
-  background-color: rgba(233, 222, 200, 0.75);
   padding-bottom: 2rem;
-  /* background-color:chocolate; */
 
   a {
     color: var(--text-1);

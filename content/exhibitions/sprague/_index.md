@@ -10,7 +10,10 @@ title = 'Aboriginal Derivative Tapestry'
 
 June 29 - August 3, 2024
 
-[Visit Exhibit Page](https://events.slcpl.org/event/10995813)
+{{< cta-button 
+  button_label = "Visit Exhibit Page" 
+  button_href = "https://events.slcpl.org/event/10995813" 
+>}}
 
 ### ARTIST'S STATEMENT
 
