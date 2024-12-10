@@ -1,12 +1,14 @@
   {{ $section := .Section }}
   <menu class="{{ $section }}" id="menu">
+    <button class="hamburger" style="display:none;" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
     <nav class="main">
 
+    <div><a href="{{ "/" | relURL }}">{{ (site.GetPage "home").Title }}</a></div>
     <ul>
       {{ with site.Menus.main }}
         {{ range $index, $item := . }}
           <li 
-            class="{{ if eq $index 0 }}left{{ else }}right{{ end }} {{ $item.Page.Section }}" 
+            class="right {{ $item.Page.Section }}" 
             itemscope 
             itemtype="http://www.schema.org/SiteNavigationElement"
           >
@@ -29,14 +31,9 @@
     </nav>
     {{ if eq .Section "about" }}
       <nav class="categories">
-    {{/*  {{ . | debug.Dump }}  */}}
-    {{/*  {{ . | jsonify (dict "indent" " ") }}  */}}
-    {{/*  {{ .Params | debug.Dump }}  */}}
         <ul>
         {{ $path := printf "%s/" .Path }}
-        {{/*  [{{ $path }}]:  */}}
         {{ range site.Menus.meta }}
-          {{/*  :[{{ .URL }}]  */}}
           <li>
             <a aria-current="{{ eq $path .URL }}" href="{{ .URL }}" itemprop="url">
               <span itemprop="name">{{ .Name }}</span>

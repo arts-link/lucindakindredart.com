@@ -1,6 +1,6 @@
 +++
 title = "wool fans"
-date = 2024-11-20T12:05:09-08:00
+date = 2024-12-09T17:19:17-08:00
 media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -14,8 +14,9 @@ media = "Embroidery on Linen"
 # sort_order = # default is asc
 src = "Adena - wool fans.webp"
 dimensions = "10X12"
-  series = ["all","warm"]
-  exhibited = "NO"
+  series = ["warm"]
+    exhibitions = ["EHC"]
+  exhibited = "EHC"
 date_created = "2022"
 price = "175"
 buyer = "REDACTED"

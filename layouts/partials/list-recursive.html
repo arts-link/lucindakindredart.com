@@ -45,7 +45,7 @@ Model where things are 1 image per folder with data in the frontmatter for taxon
   {{- end }}
   
   <section class="gallery">
-    WHAAAAAAAAA
+hi list recurrs
     <div id="gallery" style="visibility: hidden; height: 1px; overflow: hidden">
       {{- range sort $images (.Params.sort_by | default "Name") (.Params.sort_order | default "asc") }}
         {{- $image := .image }}
@@ -57,7 +57,6 @@ Model where things are 1 image per folder with data in the frontmatter for taxon
           <figure style="background-color: {{ $color }}; aspect-ratio: {{ $thumbnail.Width }} / {{ $thumbnail.Height }}">
             <img class="lazyload" width="{{ $thumbnail.Width }}" height="{{ $thumbnail.Height }}" data-src="{{ $thumbnail.RelPermalink }}" alt="{{ .Title }}" />
            <div>
-            <h1>WHAT THE FUCKCKKKKKKK!!!!</h1>
             <h2>{{- .Title }}</h2>
             <p>
               {{- with .Params.dimensions }}

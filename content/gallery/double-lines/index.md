@@ -1,6 +1,6 @@
 +++
-title = "Double Lines"
-date = 2024-11-20T12:05:10-08:00
+title = ""
+date = 2024-12-09T17:19:22-08:00
 media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -13,14 +13,9 @@ media = "Embroidery on Linen"
 # weight = # sort weight
 # sort_order = # default is asc
 src = "double-lines.webp"
-dimensions = "12 X 12"
-  series = ["all","cool", "squares"]
-  exhibited = "no"
-date_created = "2034"
-from_csv = true
 [[resources]]
   src = "double-lines.webp"
-  title = "Double Lines"
+  title = ""
   [resources.params]
   date = ""
 

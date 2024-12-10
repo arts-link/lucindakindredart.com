@@ -1,6 +1,6 @@
 +++
 title = "Cool Lines"
-date = 2024-11-20T12:28:11-08:00
+date = 2024-12-09T17:19:20-08:00
 media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -14,8 +14,7 @@ media = "Embroidery on Linen"
 # sort_order = # default is asc
 src = "Purple and Red Lines.webp"
 dimensions = "10 X 10"
-  series = ["all","cool"]
-  exhibited = "no"
+  series = ["cool"]
 date_created = "2022"
 buyer = "REDACTED"
 from_csv = true

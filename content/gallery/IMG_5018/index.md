@@ -1,6 +1,6 @@
 +++
 title = "Dreaming Yellow"
-date = 2024-11-20T12:08:36-08:00
+date = 2024-12-09T17:19:19-08:00
 media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -14,9 +14,9 @@ media = "Embroidery on Linen"
 # sort_order = # default is asc
 src = "IMG_5018.webp"
 dimensions = "10X12"
-  series = ["all","warm", "dreaming"]
-    exhibitions = ["SLCC", "EHC"]
-  exhibited = "SLCC|EHC"
+  series = ["warm", "dreaming"]
+    exhibitions = ["Sprague", "EHC"]
+  exhibited = "Sprague|EHC"
 date_created = "2024"
 price = "250"
 from_csv = true

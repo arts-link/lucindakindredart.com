@@ -1,6 +1,6 @@
 +++
 title = "Red and Purple with Diamonds"
-date = 2024-11-20T12:28:12-08:00
+date = 2024-12-09T17:19:20-08:00
 media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -14,9 +14,9 @@ media = "Embroidery on Linen"
 # sort_order = # default is asc
 src = "Red & Purple wth diamonds.webp"
 dimensions = "12 X 12"
-  series = ["all","warm"]
-    exhibitions = ["EHC"]
-  exhibited = "EHC"
+  series = ["warm"]
+    exhibitions = ["Sprague", "EHC"]
+  exhibited = "Sprague|EHC"
 date_created = "2023"
 price = "270"
 buyer = "REDACTED"

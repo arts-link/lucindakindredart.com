@@ -1,6 +1,6 @@
 +++
 title = "Shadows"
-date = 2024-11-20T12:28:12-08:00
+date = 2024-12-09T17:19:21-08:00
 media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -14,8 +14,9 @@ media = "Embroidery on Linen"
 # sort_order = # default is asc
 src = "Shadow - Cooper.webp"
 dimensions = "8 X 10"
-  series = ["all","warm"]
-  exhibited = "no"
+  series = ["warm"]
+    exhibitions = ["Sprague"]
+  exhibited = "Sprague"
 date_created = "2023"
 buyer = "REDACTED"
 from_csv = true

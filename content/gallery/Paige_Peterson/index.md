@@ -1,6 +1,6 @@
 +++
 title = "Miror Image"
-date = 2024-11-20T12:28:11-08:00
+date = 2024-12-09T17:19:20-08:00
 media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -14,9 +14,11 @@ media = "Embroidery on Linen"
 # sort_order = # default is asc
 src = "Paige Peterson.webp"
 dimensions = "10X 12"
-  series = ["all","warm"]
-  exhibited = "no"
+  series = ["warm"]
+    exhibitions = ["EHC"]
+  exhibited = "EHC"
 date_created = "2022"
+price = "350"
 buyer = "REDACTED"
 from_csv = true
 [[resources]]

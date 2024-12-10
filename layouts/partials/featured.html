@@ -1,0 +1,22 @@
+{{ range where site.Pages.ByDate.Reverse "Params.featured" "=" true | first 1 }}
+  {{ $gallery := partial "get-gallery.html" . }}
+  {{ if $gallery }}
+    {{ $images := $gallery.images }}
+    {{ $index := 0 }}
+    {{ range $i, $image := $images }}
+      {{ if index $image.Params "cover" }}
+        {{ $index = $i }}
+      {{ end }}
+    {{ end }}
+    {{ $featured := ($images.GetMatch (.Params.featured_image | default "*feature*")) | default (index $images $index) }}
+    {{ $thumbnail := $featured.Filter (slice images.AutoOrient (images.Process "fit 1600x1600")) }}
+    {{ $color := index $thumbnail.Colors 0 | default "transparent" }}
+    <section class="featured">
+      <a class="featured-card" href="{{ .RelPermalink }}" style="background-color: {{ $color }}; background-image: url({{ $thumbnail.RelPermalink }})">
+        <div>
+          <h2>Featured Exhibition: {{ .Title }}</h2>
+        </div>
+      </a>
+    </section>
+  {{ end }}
+{{ end }}

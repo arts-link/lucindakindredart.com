@@ -1,6 +1,6 @@
 +++
-title = "5 Circles"
-date = 2024-11-20T12:28:08-08:00
+title = "Coming Together"
+date = 2024-12-09T17:19:17-08:00
 media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -14,13 +14,15 @@ media = "Embroidery on Linen"
 # sort_order = # default is asc
 src = "5-circles.webp"
 dimensions = "10 X 12"
-  series = ["all","warm"]
-  exhibited = "no"
+  series = ["warm"]
+    exhibitions = ["Sprague", "EHC"]
+  exhibited = "Sprague|EHC"
 date_created = "2023"
+price = "325"
 from_csv = true
 [[resources]]
   src = "5-circles.webp"
-  title = "5 Circles"
+  title = "Coming Together"
   [resources.params]
   date = ""
 

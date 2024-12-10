@@ -1,6 +1,6 @@
 +++
 title = "Green Squares"
-date = 2024-11-20T12:08:36-08:00
+date = 2024-12-09T17:19:18-08:00
 media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -14,9 +14,9 @@ media = "Embroidery on Linen"
 # sort_order = # default is asc
 src = "IMG_2453.webp"
 dimensions = "14 X 15"
-  series = ["all","cool"]
-    exhibitions = ["Sprague"]
-  exhibited = "Sprague"
+  series = ["cool"]
+    exhibitions = ["EHC"]
+  exhibited = "EHC"
 date_created = "2024"
 price = "475"
 from_csv = true

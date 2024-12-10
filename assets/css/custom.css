@@ -182,25 +182,122 @@ body {
     font-weight: bold;
   }
 }
-
-
 body {
   > menu {
     margin: 0 auto;
     padding: 0 0 1.5rem;
     width: 100%;
-    display: block; 
+    max-width: 100%;
+    display: block;
     box-sizing: border-box;
-    
+
     nav.main {
-      padding: 1.5rem 1.5rem 0;
+      width: 100%; /* Ensures full width for navigation */
+      padding: 1.5rem 0.3rem 0;
       background-color: #b5d5d5;
       border-bottom: 2px solid #d2b48c;
+      display: flex; /* Flexbox layout */
+      justify-content: space-between; /* Align div and ul */
+      flex-wrap: wrap;
+      align-items: center;
+
+      @media (min-width: 380px) {
+        padding: 1.5rem 1.5rem 0;
+      }
+      @media (min-width: 768px) {
+        padding: 1.5rem 1.5rem 0;
+      }
+
+      > div {
+        /* Styling for the Home link container */
+        /* flex: 1; Allows it to span as needed */
+        /* max-width: 50%; Prevents it from overtaking the nav */
+        margin-right: auto;
+        text-align: left;
+
+        a {
+          display: inline-block;
+          border-top-left-radius: 0.375rem;
+          border-top-right-radius: 0.375rem;
+          background-color: var(--surface-2);
+          border: 1px solid var(--border);
+          border-bottom: 0px;
+          color: var(--text-2);
+          padding: 0.5rem 0.5rem;
+          font-weight: 600;
+          font-size: 0.875rem;
+          line-height: 1.0rem;
+          text-decoration: none;
+          transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+
+          @media (min-width: 768px) {
+            font-size: 1.0rem;
+            line-height: 1.5rem;
+            padding: 0.5rem 1rem;
+          }
+
+          &:hover,
+          &[aria-current="true"] {
+            background-color: var(--hover);
+            border-color: var(--text-2);
+            border-bottom: 0px;
+            color: var(--text-1);
+          }
+        }
+      }
+
+      > ul {
+        flex: 1; /* Ensures it takes remaining space */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end; /* Aligns items to the right */
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          margin: 0 0.5rem;
+
+          &.right {
+            margin-left: 1rem;
+          }
+
+          a {
+            display: block;
+            border-top-left-radius: 0.375rem;
+            border-top-right-radius: 0.375rem;
+            background-color: var(--surface-2);
+            border: 1px solid var(--border);
+            border-bottom: 0px;
+            color: var(--text-2);
+            padding: 0.5rem 0.5rem;
+            font-weight: 600;
+            font-size: 0.75rem;
+            line-height: 1.0rem;
+            text-decoration: none;
+            transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+
+            @media (min-width: 768px) {
+              font-size: 1.0rem;
+              line-height: 1.5rem;
+              padding: 0.5rem 1rem;
+            }
+
+            &:hover,
+            &[aria-current="true"] {
+              background-color: var(--hover);
+              border-color: var(--text-2);
+              border-bottom: 0px;
+              color: var(--text-1);
+            }
+          }
+        }
+      }
     }
 
-
-    &.about { 
-      ul li.about a:hover, ul li.about a[aria-current=true] {
+    &.about {
+      ul li.about a:hover,
+      ul li.about a[aria-current=true] {
         border-color: #A63636;
       }
 
@@ -210,7 +307,8 @@ body {
     }
 
     &.exhibitions {
-      ul li.exhibitions a:hover, ul li.exhibitions a[aria-current=true] {
+      ul li.exhibitions a:hover,
+      ul li.exhibitions a[aria-current=true] {
         border-color: #2E4E6E;
       }
       nav.categories {
@@ -221,24 +319,22 @@ body {
     nav.categories {
       text-align: right;
       background-color: #2f4f4f;
-      padding: .5rem 1.5rem;
+      padding: 0.5rem 1.5rem;
       margin: 0 auto 0;
-    
+
       > ul {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end; 
+        justify-content: flex-end;
         gap: 0.5rem;
         flex-wrap: wrap;
-    
+
         li {
           max-width: 100%;
-    
+
           > a {
             display: block;
             padding: 0.25rem 0.12rem;
-            /* border-radius: 0.375rem; */
-            /* border: 1px solid var(--border); */
             border-radius: 0;
             border: none;
             color: #ffffff;
@@ -248,131 +344,32 @@ body {
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-    
+
             @media (min-width: 640px) {
-              padding: 0.5rem .25rem;
+              padding: 0.5rem 0.25rem;
               font-size: 1rem;
             }
-    
+
             &:hover {
               background-color: transparent;
               border: none;
               color: #ffffff;
               text-decoration: underline;
             }
+            &[aria-current=true] {
+              text-decoration: underline;
+              position: relative;
+              background-color: inherit;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+              filter: brightness(1.2);
+              transition: all 0.3s ease-in-out;
+            }
           }
-        }
-      }
-    }
-
-    
-    body>menu ul li a:hover, body>menu ul li a[aria-current=true] {
-      background-color: var(--hover);
-      border-color: var(--text-2);
-      border-bottom: 0px;
-      color: var(--text-1);
-  }
-
-    ul {
-      display: flex; 
-      justify-content: space-between; 
-      align-items: center; 
-      list-style: none; 
-      margin: 0; 
-      /* padding: 1.5rem 1.5rem 0rem; */
-      width: 100%;
-
-      li {
-        flex: none;
-
-        &.left {
-          margin-right: auto;
-        }
-
-        &.right {
-          margin-left: 1rem;
-        }
-
-        a {
-          display: block;
-          border-radius: 0.375rem;
-          border-bottom-left-radius: 0;
-          border-bottom-right-radius: 0;
-          background-color: var(--surface-2);
-          border: 1px solid var(--border);
-          border-bottom: 0px;
-          color: var(--text-2);
-          padding: 0.5rem 1rem;
-          font-weight: 600;
-          font-size: 1rem;
-          line-height: 1.5rem;
-          text-decoration: none;
-          transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-
-          &:hover,
-          &[aria-current="true"] {
-            background-color: var(--hover);
-            border-color: var(--text-2);
-            border-bottom: 0px;
-            color: var(--text-1);
-          }
-        }
-        a:hover, a[aria-current=true] {
-          background-color: var(--hover);
-          border-color: var(--text-2);
-          border-bottom: 0px;
-          color: var(--text-1);
-        }
-      }
-    }
-
-    ul,
-    & {
-      min-width: 100%; 
-    }
-  }
-}
-
-nav.categories {
-  padding: 0rem;
-  margin: 1rem auto 3rem;
-
-  > ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: center; 
-    gap: 0.75rem;
-    flex-wrap: wrap;
-
-    li {
-      max-width: 100%;
-
-      > a {
-        display: block;
-        padding: 0.5rem 0.75rem;
-        border-radius: 0.375rem;
-        border: 1px solid var(--border);
-        font-size: 0.875rem;
-        line-height: 1.25rem;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-
-        @media (min-width: 640px) {
-          padding: 0.75rem 1rem;
-          font-size: 1rem;
-        }
-
-        &:hover {
-          background-color: var(--hover);
-          border-color: var(--text-2);
-          color: var(--text-1);
         }
       }
     }
   }
 }
-
 
 
 
@@ -386,6 +383,13 @@ body > footer {
   border-top: 5px solid #2f4f4f;
   width: 100%;
   padding: .5rem;
+
+  &.about {
+    border-top: 5px solid #A63636;
+  }
+  &.exhibitions {
+    border-top: 5px solid #2E4E6E;
+  }
 
   section {
     display: flex;
@@ -518,4 +522,27 @@ body > footer {
       text-transform: none;
     }
   }
+}
+
+section.featured {
+  /* color: var(--text-2); */
+  color: #ffffff;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('/fonts/Nunito/Nunito-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; /* Range of weights */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('/fonts/Nunito/Nunito-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+body {
+  font-family: 'Nunito', Arial, sans-serif;
 }

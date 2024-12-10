@@ -1,6 +1,6 @@
 +++
 title = "Six Boxes"
-date = 2024-11-20T12:00:56-08:00
+date = 2024-12-09T17:19:17-08:00
 media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -14,8 +14,7 @@ media = "Embroidery on Linen"
 # sort_order = # default is asc
 src = "6 Squares - Nicole.webp"
 dimensions = "12x14"
-  series = ["all","cool", "squares"]
-  exhibited = "no"
+  series = ["cool", "squares"]
 date_created = "2023"
 price = "350"
 buyer = "REDACTED"

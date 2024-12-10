@@ -1,6 +1,6 @@
 +++
 title = "Draaming Version 3"
-date = 2024-11-20T12:05:10-08:00
+date = 2024-12-09T17:19:18-08:00
 media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -14,8 +14,7 @@ media = "Embroidery on Linen"
 # sort_order = # default is asc
 src = "Dreams 2.webp"
 dimensions = "12  X 14"
-  series = ["all","warm", "dreaming"]
-  exhibited = "no"
+  series = ["warm", "dreaming"]
 date_created = "2023"
 buyer = "REDACTED"
 from_csv = true

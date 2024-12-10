@@ -1,6 +1,6 @@
 +++
 title = "Green Cross"
-date = 2024-11-20T12:28:10-08:00
+date = 2024-12-09T17:19:19-08:00
 media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -14,9 +14,9 @@ media = "Embroidery on Linen"
 # sort_order = # default is asc
 src = "Lesser.webp"
 dimensions = "12 X 12"
-  series = ["all","cool"]
-  exhibited = "no"
+  series = ["cool"]
 date_created = "2021"
+price = "350"
 buyer = "REDACTED"
 from_csv = true
 [[resources]]

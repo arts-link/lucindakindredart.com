@@ -1,6 +1,6 @@
 +++
-title = "Tapestry"
-date = 2024-11-20T12:28:13-08:00
+title = "Tapestry with Gold"
+date = 2024-12-09T17:19:21-08:00
 media = "Embroidery on Linen"
 # exhibition = ""
 # layout = 'page' # use this if it is a page with text on it
@@ -14,13 +14,15 @@ media = "Embroidery on Linen"
 # sort_order = # default is asc
 src = "tapestry-6.webp"
 dimensions = "12 X 14"
-  series = ["all","warm"]
-  exhibited = "no"
+  series = ["warm"]
+    exhibitions = ["EHC"]
+  exhibited = "EHC"
 date_created = "2023"
+buyer = "REDACTED"
 from_csv = true
 [[resources]]
   src = "tapestry-6.webp"
-  title = "Tapestry"
+  title = "Tapestry with Gold"
   [resources.params]
   date = ""
 
