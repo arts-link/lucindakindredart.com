@@ -1,9 +1,12 @@
   {{ $section := .Section }}
   <menu class="{{ $section }}" id="menu">
-    <button class="hamburger" style="display:none;" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
     <nav class="main">
     <div><a href="{{ "" | absURL }}">{{ (site.GetPage "home").Title }}</a></div>
-    <ul>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span class="hamburger-icon">☰</span>
+      <span class="close-icon" hidden>×</span>
+    </button>    
+    <ul class="main-menu">
       {{ with site.Menus.main }}
         {{ range $index, $item := . }}
           <li 

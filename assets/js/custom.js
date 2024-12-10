@@ -2,8 +2,14 @@
 // document.documentElement.className = 'light'; 
 
 
-  function toggleMenu() {
-    alert('toggleMenu');
-    const menu = document.getElementById('menu');
-    menu.classList.toggle('menu-open');
-  }
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.querySelector('.hamburger');
+  const mainNav = document.querySelector('nav.main');
+
+  hamburger.addEventListener('click', () => {
+    mainNav.classList.toggle('menu-open');
+    hamburger.setAttribute('aria-expanded', 
+      hamburger.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
+    );
+  });
+});

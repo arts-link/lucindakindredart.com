@@ -6,4 +6,25 @@
       {{ partial "album-card.html" . }}
     {{ end }}
   </section>  */}}
+  <hgroup>
+    <h2>Purchase</h2>
+  <hgroup>
+    <section>
+      <p>If you are interested in purchasing any of the work please contact Cindy.</p>
+      {{- $cta_opts := (dict 
+        "button_label" "Purchase"
+        "button_relref" "about/purchase"
+        "button_icon" "fas fa-shopping-cart"
+        "page" .) }}
+      {{- partial "cta-button.html" $cta_opts }}
+    </section>
+    <h2>Series collections</h2>
+  </hgroup>
+  <section class="galleries">
+    {{ with site.GetPage "taxonomyTerm" ("series") }}
+      {{ range where .Pages "Params.private" "ne" true }}
+        {{ partial "album-card.html" . }}
+      {{ end }}
+    {{ end }}
+  </section>
 {{ end }}

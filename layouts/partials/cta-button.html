@@ -17,6 +17,6 @@ for example::
 {{ $button_icon := .button_icon }}
 
 
-<a style="position: relative; display: block; z-index: 10;" href="{{ $button_href }}">
+<a style="position: relative; display: block; z-index: 10;" href="{{ if $button_relref }}{{ relref .page $button_relref }}{{ else }}{{ $button_href }}{{ end }}">
   <span class="{{ $button_class }}">{{ with $button_icon }}<i class="{{ . }}"></i>{{ end }}{{ with $button_label }}{{ . }} {{ end }}</span>
 </a>
