@@ -3,7 +3,7 @@
     <button class="hamburger" style="display:none;" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
     <nav class="main">
 
-    <div><a href="{{ "/" | relURL }}">{{ (site.GetPage "home").Title }}</a></div>
+    <div><a href="{{ "/" | absURL }}">{{ (site.GetPage "home").Title }}</a></div>
     <ul>
       {{ with site.Menus.main }}
         {{ range $index, $item := . }}
