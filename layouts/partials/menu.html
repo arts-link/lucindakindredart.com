@@ -2,6 +2,8 @@
   <menu class="{{ $section }}" id="menu">
     <button class="hamburger" style="display:none;" aria-label="Toggle menu" onclick="toggleMenu()">☰</button>
     <nav class="main">
+      [{{ .Site.BaseURL }}]  
+      [{{ "/" | absURL }}]
 
     <div><a href="{{ "/" | absURL }}">{{ (site.GetPage "home").Title }}</a></div>
     <ul>
