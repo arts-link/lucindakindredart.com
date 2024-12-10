@@ -45,7 +45,6 @@ Model where things are 1 image per folder with data in the frontmatter for taxon
   {{- end }}
   
   <section class="gallery">
-hi list recurrs
     <div id="gallery" style="visibility: hidden; height: 1px; overflow: hidden">
       {{- range sort $images (.Params.sort_by | default "Name") (.Params.sort_order | default "asc") }}
         {{- $image := .image }}

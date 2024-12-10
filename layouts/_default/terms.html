@@ -7,7 +7,6 @@
     </p>
     </section>
   {{ end }}
-    dd
   <section class="galleries">
     {{ with site.GetPage "taxonomyTerm" (.Section) }}
       {{ range where .Pages "Params.private" "ne" true }}
