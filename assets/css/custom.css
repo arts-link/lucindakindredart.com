@@ -605,3 +605,23 @@ section.featured {
 body {
   font-family: 'Nunito', Arial, sans-serif;
 }
+
+
+
+
+.callout {
+  border: 1px solid lightgreen; 
+  border-radius: 8px; 
+  background-color: #e6ffe6; 
+  padding: 16px; 
+  margin: 16px auto; 
+  font-family: Arial, sans-serif;
+  color: #006600; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  line-height: 1.5; 
+  width: 80%;
+  a {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}

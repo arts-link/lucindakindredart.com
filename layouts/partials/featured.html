@@ -8,13 +8,16 @@
         {{ $index = $i }}
       {{ end }}
     {{ end }}
+    <hgroup>
+      <h1> Featured Exhibition </h1>
+    </hgroup>
     {{ $featured := ($images.GetMatch (.Params.featured_image | default "*feature*")) | default (index $images $index) }}
     {{ $thumbnail := $featured.Filter (slice images.AutoOrient (images.Process "fit 1600x1600")) }}
     {{ $color := index $thumbnail.Colors 0 | default "transparent" }}
     <section class="featured">
       <a class="featured-card" href="{{ .RelPermalink }}" style="background-color: {{ $color }}; background-image: url({{ $thumbnail.RelPermalink }})">
         <div>
-          <h2>Featured Exhibition: {{ .Title }}</h2>
+          <h2>{{ .Title }}</h2>
         </div>
       </a>
     </section>

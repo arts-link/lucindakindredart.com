@@ -2,9 +2,11 @@
 date = '2024-11-15T10:54:27-08:00'
 # draft = true
 title = 'Evolutionary Health Clinic Exhibition'
+featured = true
+featured_image = "IMG_4986.webp"
 +++
 
-## EHC Clinic gallery
+## Evolutionary Health Clinic gallery
 
 
 ### ARTIST'S STATEMENT

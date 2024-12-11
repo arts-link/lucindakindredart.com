@@ -1,27 +1,23 @@
 {{ define "main" }}
   {{ partial "title.html" . }}
+
+  <section class="prose callout">
+    <a href="/about/purchase">
+    <p >If you are interested in purchasing any of my pieces or a custom piece, please contact Cindy.</p>
+    </a>
+  </section>
   {{ partial "featured.html" . }}
   {{/*  <section class="galleries">
     {{ range where .Pages "Params.private" "ne" true }}
       {{ partial "album-card.html" . }}
     {{ end }}
   </section>  */}}
+  
   <hgroup>
-    <h2>Purchase</h2>
-  <hgroup>
-    <section>
-      <p>If you are interested in purchasing any of the work please contact Cindy.</p>
-      {{- $cta_opts := (dict 
-        "button_label" "Purchase"
-        "button_relref" "about/purchase"
-        "button_icon" "fas fa-shopping-cart"
-        "page" .) }}
-      {{- partial "cta-button.html" $cta_opts }}
-    </section>
-    <h2>Series collections</h2>
+    <h2>Recent Exhibitions</h2>
   </hgroup>
   <section class="galleries">
-    {{ with site.GetPage "taxonomyTerm" ("series") }}
+    {{ with site.GetPage "taxonomyTerm" ("exhibitions") }}
       {{ range where .Pages "Params.private" "ne" true }}
         {{ partial "album-card.html" . }}
       {{ end }}
