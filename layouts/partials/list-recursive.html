@@ -7,10 +7,14 @@ Model where things are 1 image per folder with data in the frontmatter for taxon
     {{/* Get the parent page's params (dimensions and media) once before processing images */}}
     {{- $parentDimensions := .Params.dimensions }}
     {{- $parentMedia := .Params.media }}
+    {{- $price := .Params.price }}
+    {{- $date_created := .Params.date_created }}
+    {{- $buyer := .Params.buyer }}
 
     {{- range $image := .Resources.ByType "image" }}
       {{- $title := "" }}
       {{- $date := "" }}
+      {{- $meta := ""}}
       
       {{- with $image.Exif }}
         {{- $date = .Date }}
@@ -24,6 +28,8 @@ Model where things are 1 image per folder with data in the frontmatter for taxon
         {{/* Title from front matter */}}
         {{- $title = $image.Title }}
       {{- end }}
+      {{/*  for the image alt  */}}
+      {{- $meta = $title }}
       
       {{/* Append dimensions and media to the title */}}
       {{- if $parentDimensions }}
@@ -32,11 +38,21 @@ Model where things are 1 image per folder with data in the frontmatter for taxon
       {{- if $parentMedia }}
         {{- $title = printf "%s<br/>\nMedia: %s" $title $parentMedia }}
       {{- end }}
-      
+      {{- if $price }}
+        {{- $title = printf "%s<br/>\nPrice: $%s" $title $price}}
+      {{- end }}
+      {{- if $buyer }}
+        {{- $title = printf "%s<br/>\n%s" $title "SOLD"}}
+      {{- end }}
+      {{- if $date_created }}
+        {{- $title = printf "%s<br/>\nDate Created: %s" $title $date_created }}
+      {{- end }}
+
       {{/* Append to the existing $images slice */}}
       {{- $images = $images | append (dict
         "Name" $image.Name
         "Title" $title
+        "Sold" $buyer
         "Date" $date
         "image" $image
         )
@@ -57,14 +73,6 @@ Model where things are 1 image per folder with data in the frontmatter for taxon
             <img class="lazyload" width="{{ $thumbnail.Width }}" height="{{ $thumbnail.Height }}" data-src="{{ $thumbnail.RelPermalink }}" alt="{{ .Title }}" />
            <div>
             <h2>{{- .Title }}</h2>
-            <p>
-              {{- with .Params.dimensions }}
-                {{- . }}<br/>
-              {{- end }}
-              {{- with .Params.media }}
-                {{- . }}
-              {{- end }}
-            </p>
           </div>
           </figure>
          <meta itemprop="contentUrl" content="{{ $image.RelPermalink }}" />
