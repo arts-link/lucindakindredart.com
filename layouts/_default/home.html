@@ -1,9 +1,13 @@
 {{ define "main" }}
-  {{ partial "title.html" . }}
-
-  <section class="prose callout">
+  <hgroup>
+    {{/*  <h1>{{ .Title }}</h1>  */}}
+    {{ with .Params.Description }}
+      <h2>{{ . | markdownify }}</h2>
+    {{ end }}
+  </hgroup>
+  <section class=" callout">
     <a href="/about/purchase">
-    <p >If you are interested in purchasing any of my pieces or a custom piece, please contact Cindy.</p>
+    <p >If you are interested in purchasing any of these pieces or a custom piece, please contact Cindy.</p>
     </a>
   </section>
   {{ partial "featured.html" . }}
