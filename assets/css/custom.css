@@ -298,6 +298,7 @@ body {
           line-height: 1.0rem;
           text-decoration: none;
           transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+          font-family: 'Monoton', 'Nunito', Arial, sans-serif;
 
           
 
@@ -332,7 +333,7 @@ body {
             border: 1px solid var(--border);
             border-bottom: 0px;
             color: var(--text-2);
-            padding: 0.5rem 0.5rem;
+            padding: 0.5rem 0.25rem;
             font-weight: 600;
             font-size: 1.25rem;
             line-height: 1.5rem;
@@ -342,7 +343,7 @@ body {
             @media (min-width: 768px) {
               font-size: 1.0rem;
               line-height: 1.5rem;
-              padding: 0.5rem 1rem;
+              padding: 0.5rem 0.25rem;
             }
 
             &:hover,
@@ -600,6 +601,13 @@ section.featured {
   src: url('/fonts/Nunito/Nunito-Italic-VariableFont_wght.ttf') format('truetype');
   font-weight: 100 900;
   font-style: italic;
+}
+
+@font-face {
+  font-family: 'Monoton';
+  src: url('/fonts/Monoton/Monoton-Regular.ttf') format('truetype');
+  font-weight: 100 900; /* Range of weights */
+  font-style: normal;
 }
 
 body {
