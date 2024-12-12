@@ -294,7 +294,7 @@ body {
           color: var(--text-1);
           padding: 0.5rem 0.5rem;
           font-weight: 800;
-          font-size: 2.0rem;
+          font-size: 1.5rem;
           line-height: 1.0rem;
           text-decoration: none;
           transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
@@ -343,7 +343,7 @@ body {
             @media (min-width: 768px) {
               font-size: 1.0rem;
               line-height: 1.5rem;
-              padding: 0.5rem 0.25rem;
+              padding: 0.5rem 0.5rem;
             }
 
             &:hover,
@@ -640,6 +640,16 @@ body {
     background-color: #e6f7ff;
     color: #004080;
   }
+  &.yellow {
+    border-color: lightgoldenrodyellow;
+    background-color: #fffbe6;
+    color: #806600;
+  }
+  &.grey {
+    border-color: lightgrey;
+    background-color: #f7f7f7;
+    color: #404040;
+  }
 }
 
 
@@ -647,15 +657,27 @@ body {
   display: flex;
   flex-direction: column; /* Stack by default */
   gap: 16px; /* Optional spacing between items */
-
+  margin: 0 auto;
+  text-align: center;
+  width: 90%;
+  max-width: 1280px;
   @media (min-width: 768px) {
     flex-direction: row; /* Side by side for screens > 768px */
-    align-items: flex-start; /* Align items to the top */
+    /* align-items: flex-start; Align items to the top */
   }
 
   hgroup {
     flex: 1; /* Adjust width as needed */
-  }
+    display: flex;
+    flex-direction: column; /* Ensures vertical stacking of elements */
+    align-items: center; /* Centers items horizontally */
+    justify-content: center; /* Centers items vertically */
+    text-align: center; /* Optional, centers text content */
+}
+
+hgroup h2 {
+    margin: 0; /* Removes default margins */
+}
 
   section {
     flex: 1; /* Adjust width as needed */
