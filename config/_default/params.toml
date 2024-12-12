@@ -9,6 +9,10 @@ formspreeFormid = "xvovzqzj"
     boxSpacing = 15 
     targetRowHeight = 338
     targetRowHeightTolerance = 0.25
+[gallerydeluxe.watermark]
+    image = "images/sold-250.png" # relative to /assets
+    posx  = "right"                    # one of "left", "center", "right"
+    posy  = "bottom"             
 # [socialIcons]
   # facebook = "https://www.facebook.com/"
   # email = "mailto:lucinkin@gmail.com"

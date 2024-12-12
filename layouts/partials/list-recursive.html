@@ -64,8 +64,50 @@ Model where things are 1 image per folder with data in the frontmatter for taxon
     <div id="gallery" style="visibility: hidden; height: 1px; overflow: hidden">
       {{- range sort $images (.Params.sort_by | default "Name") (.Params.sort_order | default "asc") }}
         {{- $image := .image }}
-        {{- $thumbnail := $image.Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}
-        {{- $full := $image.Filter (slice images.AutoOrient (images.Process "fit 1600x1600")) }}
+
+        {{ $full := $image }}
+        {{ if .Sold }}
+          {{ with site.Params.gallerydeluxe.watermark }}
+            {{ $opts := . }}
+            {{ with resources.Get .image }}
+              {{ $watermark := . }}
+              {{ $fullWidth := $full.Width }}
+              {{ $watermarkMaxWidth := div $fullWidth 21 }}
+              {{ if gt $watermark.Width $watermarkMaxWidth }}
+                {{ $watermark = $watermark.Resize (printf "%dx" $watermarkMaxWidth) }}
+              {{ end }}
+              {{ $watermarkWidth := $watermark.Width }}
+              {{ $watermarkHeight := $watermark.Height }}
+              {{ $posx :=  $opts.posx | default "right" }}
+              {{ $posy := $opts.posy | default "bottom" }}
+              {{ $padding := 20 }}
+              {{ $x := $padding }}
+              {{ $y := $padding }}
+              {{ if eq $posx "center" }}
+                {{ $x = div $fullWidth 2 }}
+                {{ $x = sub $x (div $watermarkWidth 2) }}
+              {{ end }}
+              {{ if eq $posy "center" }}
+                {{ $y = div $full.Height 2 }}
+                {{ $y = sub $y (div $watermarkHeight 2) }}
+              {{ end }}
+              {{ if eq $posx "right" }}
+                {{ $x = sub $fullWidth  (add $watermarkWidth $padding) }}
+              {{ end }}
+              {{ if eq $posy "bottom" }}
+                {{ $y = sub  $full.Height (add $watermarkHeight $padding) }}
+              {{ end }}
+              {{ $full = $full.Filter (images.Overlay $watermark $x $y ) }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+
+
+        
+        
+        {{- $thumbnail := $full.Filter (slice images.AutoOrient (images.Process "fit 600x600")) }}
+        {{/*  {{- $full := $image.Filter (slice images.AutoOrient (images.Process "fit 1600x1600")) }}  */}}
+        
         {{- $color := index $thumbnail.Colors 0 | default "transparent" }}
         
         <a class="gallery-item" href="{{ $image.RelPermalink }}" data-pswp-src="{{ $full.RelPermalink }}" data-pswp-width="{{ $full.Width }}" data-pswp-height="{{ $full.Height }}" title="{{ .Title }}" itemscope itemtype="https://schema.org/ImageObject" style="aspect-ratio: {{ $thumbnail.Width }} / {{ $thumbnail.Height }}">

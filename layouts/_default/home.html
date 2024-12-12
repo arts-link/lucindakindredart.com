@@ -9,12 +9,14 @@
       {{ .Content }}      
     </section>
   </div>
+ 
+  {{ partial "featured.html" . }}
+
   <section class=" callout">
     <a href="{{ "/about/purchase/" | relURL }}">
     <p >If you are interested in purchasing any of these pieces or a custom piece, please contact Cindy.</p>
     </a>
   </section>
-  {{ partial "featured.html" . }}
   {{/*  <section class="galleries">
     {{ range where .Pages "Params.private" "ne" true }}
       {{ partial "album-card.html" . }}
