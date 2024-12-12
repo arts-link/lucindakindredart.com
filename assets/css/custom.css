@@ -626,4 +626,40 @@ body {
     text-decoration: none;
     cursor: pointer;
   }
+
+  &.blue {
+    border-color: lightblue;
+    background-color: #e6f7ff;
+    color: #004080;
+  }
+}
+
+
+.responsive-hp-container {
+  display: flex;
+  flex-direction: column; /* Stack by default */
+  gap: 16px; /* Optional spacing between items */
+
+  @media (min-width: 768px) {
+    flex-direction: row; /* Side by side for screens > 768px */
+    align-items: flex-start; /* Align items to the top */
+  }
+
+  hgroup {
+    flex: 1; /* Adjust width as needed */
+  }
+
+  section {
+    flex: 1; /* Adjust width as needed */
+    display: flex;
+    flex-direction: column; /* Stack content inside the section */
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Optional: Center text inside the section */
+
+    p {
+      margin: 0; /* Optional: Reset margins for consistent spacing */
+      text-align: left; /* If needed, you can change text alignment for <p> tags */
+    }
+  }
 }

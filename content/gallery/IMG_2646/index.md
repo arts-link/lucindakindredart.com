@@ -1,5 +1,5 @@
 +++
-title = ""
+title = "Wool Rendering"
 date = 2024-12-09T17:19:22-08:00
 media = "Embroidery on Linen"
 # exhibition = ""
@@ -12,10 +12,14 @@ media = "Embroidery on Linen"
 # sort_by = # name or date
 # weight = # sort weight
 # sort_order = # default is asc
+dimensions = "8X10"
 src = "IMG_2646.webp"
+  series = ["The Collection", "warm"]
+    exhibitions = ["EHC"]
+  exhibited = "EHC"
 [[resources]]
   src = "IMG_2646.webp"
-  title = ""
+  title = "Wool Rendering"
   [resources.params]
   date = ""
 

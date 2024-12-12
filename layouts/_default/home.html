@@ -1,12 +1,16 @@
 {{ define "main" }}
-  <hgroup>
-    {{/*  <h1>{{ .Title }}</h1>  */}}
-    {{ with .Params.Description }}
-      <h2>{{ . | markdownify }}</h2>
-    {{ end }}
-  </hgroup>
+  <div class="responsive-hp-container">
+    <hgroup>
+      {{ with .Params.Description }}
+        <h2>{{ . | markdownify }}</h2>
+      {{ end }}
+    </hgroup>
+    <section>
+      {{ .Content }}      
+    </section>
+  </div>
   <section class=" callout">
-    <a href="/about/purchase">
+    <a href="{{ "/about/purchase/" | relURL }}">
     <p >If you are interested in purchasing any of these pieces or a custom piece, please contact Cindy.</p>
     </a>
   </section>
@@ -16,7 +20,11 @@
       {{ partial "album-card.html" . }}
     {{ end }}
   </section>  */}}
-  
+  <section class="callout blue">
+    <a href="{{ "/series/the-collection/" | relURL }}">    
+      <p >Dive in and explore the full collection.</p>
+    </a>
+  </section>
   <hgroup>
     <h2>Recent Exhibitions</h2>
   </hgroup>

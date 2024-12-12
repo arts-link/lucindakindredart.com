@@ -1,5 +1,5 @@
 +++
-title = ""
+title = "Floral Wave"
 date = 2024-12-09T17:19:22-08:00
 media = "Embroidery on Linen"
 # exhibition = ""
@@ -13,9 +13,13 @@ media = "Embroidery on Linen"
 # weight = # sort weight
 # sort_order = # default is asc
 src = "IMG_2637.webp"
+dimensions = "14X20"
+  series = ["The Collection", "cool"]
+    exhibitions = ["EHC"]
+  exhibited = "EHC"
 [[resources]]
   src = "IMG_2637.webp"
-  title = ""
+  title = "Floral Wave"
   [resources.params]
   date = ""
 
