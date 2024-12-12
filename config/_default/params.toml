@@ -1,10 +1,14 @@
 # defaultTheme = "dark"
-description = "Fabric art pieces inspired by Australian Aboriginal Art patterns and stories."
+description = "Fabric Art Pieces Inspired by Australian Aboriginal Art Patterns and Stories"
 title = "Lucinda Kindred Art"
 formspreeFormid = "xvovzqzj"
 [author]
   email = "lucinkin@gmail.com"
   name = "Lucinda Kindred"
+[gallery]
+    boxSpacing = 15 
+    targetRowHeight = 338
+    targetRowHeightTolerance = 0.25
 # [socialIcons]
   # facebook = "https://www.facebook.com/"
   # email = "mailto:lucinkin@gmail.com"
