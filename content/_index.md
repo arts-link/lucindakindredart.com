@@ -6,7 +6,7 @@ date = 2024-11-11T14:40:44-08:00
 
 ## The Current Exhibit:
 
-**Evolutionary Helathcare**
+**Evolutionary Helathcare Gallery**
 
 461 East 200 South, Suite 100  
 Salt Lake City, Utah  
