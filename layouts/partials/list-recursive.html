@@ -72,7 +72,7 @@ Model where things are 1 image per folder with data in the frontmatter for taxon
             {{ with resources.Get .image }}
               {{ $watermark := . }}
               {{ $fullWidth := $full.Width }}
-              {{ $watermarkMaxWidth := div $fullWidth 21 }}
+              {{ $watermarkMaxWidth := div $fullWidth 15 }}
               {{ if gt $watermark.Width $watermarkMaxWidth }}
                 {{ $watermark = $watermark.Resize (printf "%dx" $watermarkMaxWidth) }}
               {{ end }}

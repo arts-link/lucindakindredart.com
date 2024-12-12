@@ -13,6 +13,8 @@ formspreeFormid = "mvgonyqq"
     image = "images/sold-250.png" # relative to /assets
     posx  = "right"                    # one of "left", "center", "right"
     posy  = "bottom"             
+# [plausible]
+#   site = "lucindakindredart.com"
 # [socialIcons]
   # facebook = "https://www.facebook.com/"
   # email = "mailto:lucinkin@gmail.com"
