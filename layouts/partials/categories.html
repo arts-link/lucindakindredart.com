@@ -6,7 +6,8 @@
   <nav class="categories">
     <ul>
       {{ $isCurrPage := false }}
-      {{ range . }}
+      {{ $sorted := sort . "Page.Weight" }}
+      {{ range $sorted }}
         <li><a aria-current="{{- eq .Page.Permalink $currLink }}" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> </li>
       {{ end }}
     </ul>

@@ -1,6 +1,6 @@
 {{ define "main" }}
   <div class="responsive-hp-container">
-    <hgroup>
+    <hgroup class="description">
       {{ with .Params.Description }}
         <h2>{{ . | markdownify }}</h2>
       {{ end }}

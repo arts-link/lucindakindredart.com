@@ -30,6 +30,10 @@ body {
   box-shadow: 0 0 0 2px #d4d4d4;
 }
 
+h1 {
+  font-family: Limelight;
+}
+
 .contact-form {
   max-width: 600px;
   margin: 0 auto;
@@ -294,11 +298,11 @@ body {
           color: var(--text-1);
           padding: 0.5rem 0.5rem;
           font-weight: 800;
-          font-size: 1.5rem;
+          font-size: 2.0rem;
           line-height: 1.0rem;
           text-decoration: none;
           transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-          font-family: 'Monoton', 'Nunito', Arial, sans-serif;
+          font-family: 'Limelight', 'Nunito', Arial, sans-serif;
 
           
 
@@ -610,6 +614,13 @@ section.featured {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Limelight';
+  src: url('/fonts/Limelight/Limelight-Regular.ttf') format('truetype');
+  font-weight: 100 900; /* Range of weights */
+  font-style: normal;
+}
+
 body {
   font-family: 'Nunito', Arial, sans-serif;
 }
@@ -666,6 +677,11 @@ body {
     /* align-items: flex-start; Align items to the top */
   }
 
+  .description {
+    font-family: Limelight;
+    margin: 0 auto 0;
+  }
+
   hgroup {
     flex: 1; /* Adjust width as needed */
     display: flex;
@@ -673,11 +689,11 @@ body {
     align-items: center; /* Centers items horizontally */
     justify-content: center; /* Centers items vertically */
     text-align: center; /* Optional, centers text content */
-}
+  }
 
-hgroup h2 {
-    margin: 0; /* Removes default margins */
-}
+  hgroup h2 {
+      margin: 0; /* Removes default margins */
+  }
 
   section {
     flex: 1; /* Adjust width as needed */

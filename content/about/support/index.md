@@ -15,12 +15,6 @@ linkTitle = 'Support'
 
 {{< artist-image src="lockhart_logo.png" width="200" title="Lockhart River Arts" >}}
 
-Cindy’s travels to Australia introduced her to Aboriginal Art. Through Euan Hill and the Art Mob
-Gallery kn Hobart Tasmania, from whom she has purchased several Aboriginal works of art, she
-was introduced to the Lockhart River Arts group. Cindy recognized that her Aboriginal inspired
-fabric art pieces simply wouldn’t exist without the inspiration and creativity of the Australia’s
-Aboriginal Artists. Inspired by their work and that of other Aboriginal Artists, Cindy decided to
-dedicate her time and her creativity to supporting this community and its Aboriginal Artists.
 
 Cindy donates all proceeds from her artwork to the Lockhart River Arts group. Through her website and exhibitions, she raises both funds and awareness for Aboriginal Art and the Community, contributing to their mission of preserving and sharing their culture.
 

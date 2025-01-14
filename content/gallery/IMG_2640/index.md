@@ -15,8 +15,8 @@ media = "Embroidery on Linen"
 src = "IMG_2640.webp"
 dimensions = "8X10"
   series = ["The Collection", "warm"]
-    exhibitions = ["EHC"]
-  exhibited = "EHC"
+  # exhibitions = ["EHC"]
+  # exhibited = "EHC"
 [[resources]]
   src = "IMG_2640.webp"
   title = "Embrace"
