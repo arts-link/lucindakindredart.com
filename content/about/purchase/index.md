@@ -14,6 +14,11 @@ title = 'Purchase'
 
 Thank you for your interest in Cindy Kindred’s art. Every piece is crafted with care and a heartfelt commitment to supporting the Lockhart River Arts group. By purchasing her work, you are not only acquiring a unique piece of art but also contributing to a cause that preserves and celebrates the rich cultural heritage of the Lockhart River community.
 
+{{< cta-button 
+  button_label = "Get in Touch about a purchase" 
+  button_relref = "/about/contact" 
+>}}
+
 ### Purchasing Process
 
 Cindy’s artwork is not sold through traditional e-commerce to maintain a personal connection with her buyers and ensure a smooth transaction process. To inquire about purchasing a piece:
