@@ -17,6 +17,8 @@ dimensions = "14X20"
   series = ["The Collection", "cool"]
     exhibitions = ["EHC"]
   exhibited = "EHC"
+  price = "525"
+  buyer = "REDACTED"
 [[resources]]
   src = "IMG_2637.webp"
   title = "Floral Wave"

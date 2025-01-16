@@ -17,6 +17,8 @@ src = "IMG_2646.webp"
   series = ["The Collection", "warm"]
     exhibitions = ["EHC"]
   exhibited = "EHC"
+price = "525"
+buyer = "REDACTED"
 [[resources]]
   src = "IMG_2646.webp"
   title = "Wool Rendering"

@@ -18,7 +18,6 @@ dimensions = "12 X 20"
     exhibitions = ["EHC"]
   exhibited = "EHC"
 date_created = "2024"
-buyer = "REDACTED"
 from_csv = true
 [[resources]]
   src = "8 Boxes.webp"

@@ -19,7 +19,7 @@ dimensions = "12 X 12"
   exhibited = "Sprague|EHC"
 date_created = "2023 & 2024"
 price = "300"
-buyer = "REDACTED"
+# buyer = "REDACTED"
 from_csv = true
 [[resources]]
   src = "9 Green Circles.webp"

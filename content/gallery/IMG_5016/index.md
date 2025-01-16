@@ -19,6 +19,7 @@ dimensions = "12 X 12"
   exhibited = "EHC"
 date_created = "2024"
 price = "375"
+buyer = "REDACTED"
 from_csv = true
 [[resources]]
   src = "IMG_5016.webp"

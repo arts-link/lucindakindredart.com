@@ -16,6 +16,8 @@ src = "Pillow 1b.webp"
 dimensions = "16 x 16"
   series = ["The Collection", "textiles"]
 from_csv = true
+price = "525"
+buyer = "REDACTED"
 [[resources]]
   src = "Pillow 1b.webp"
   title = "Pillow"
