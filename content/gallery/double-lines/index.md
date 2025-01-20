@@ -1,5 +1,5 @@
 +++
-title = ""
+title = "Double Lines"
 date = 2024-12-09T17:19:22-08:00
 media = "Embroidery on Linen"
 # exhibition = ""
@@ -13,9 +13,15 @@ media = "Embroidery on Linen"
 # weight = # sort weight
 # sort_order = # default is asc
 src = "double-lines.webp"
+dimensions = "10 X 12 & 12 X 14"
+  series = ["The Collection", "warm"]
+date_created = "2024"
+price = "375"
+buyer = "REDACTED"
+from_csv = true
 [[resources]]
   src = "double-lines.webp"
-  title = ""
+  title = "Double Lines"
   [resources.params]
   date = ""
 
