@@ -8,6 +8,8 @@
     </hgroup>
   </div>
 
+  {{ partial "new-work.html" . }}
+
   <section class="callout blue">
     <a href="{{ "/series/the-collection/" | relURL }}">    
       <p >Dive in and explore the full collection.</p>
@@ -22,11 +24,14 @@
     </a>
   </section>
 
-  <div>
-    <section class="callout grey">
-      {{ .Content }}      
-    </section>
-  </div>
+
+  {{ if .Content }}
+    <div>
+      <section class="callout grey">
+        {{ .Content }}      
+      </section>
+    </div>
+  {{ end }}
  
   {{ partial "featured.html" . }}
 
