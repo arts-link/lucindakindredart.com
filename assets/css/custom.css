@@ -709,3 +709,16 @@ body {
     }
   }
 }
+
+/* Center figure content in grey callout sections */
+.callout.grey figure {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: fit-content;
+}
+
+.callout.grey figure img {
+  display: block;
+  margin: 0 auto;
+}
