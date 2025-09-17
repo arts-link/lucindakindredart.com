@@ -8,6 +8,15 @@
     </hgroup>
   </div>
 
+  {{ if .Content }}
+    <div>
+      <section class="callout grey">
+        {{ .Content }}      
+      </section>
+    </div>
+  {{ end }}
+
+
   {{ partial "new-work.html" . }}
 
   <section class="callout blue">
@@ -25,13 +34,7 @@
   </section>
 
 
-  {{ if .Content }}
-    <div>
-      <section class="callout grey">
-        {{ .Content }}      
-      </section>
-    </div>
-  {{ end }}
+
  
   {{/*  {{ partial "featured.html" . }}  */}}
 
