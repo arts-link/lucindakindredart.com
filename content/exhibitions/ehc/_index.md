@@ -1,9 +1,9 @@
 +++
-date = '2024-11-15T10:54:27-08:00'
+date = '2025-10-22T10:54:27-08:00'
 # draft = true
-title = 'Evolutionary Health Clinic'
-featured = true
-weight = 1
+title = 'Evolutionary Health Clinic 2024'
+# featured = true
+weight = 4
 featured_image = "IMG_4986.webp"
 +++
 
