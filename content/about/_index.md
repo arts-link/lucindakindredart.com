@@ -2,7 +2,8 @@
 title = 'About Cindy'
 date = 2024-10-29T12:49:15-07:00
 layout = 'page'
-private = true # prevents from showing in gallery lists
+type = 'page'
+# private = true # prevents from showing in gallery lists
 [menus]
   [menus.main]
     weight = 90

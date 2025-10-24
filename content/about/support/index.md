@@ -2,7 +2,7 @@
 date = '2024-11-26T12:48:15-08:00'
 # draft = true
 title = 'Art with Purpose: Supporting Lockhart River Arts'
-layout = 'page'
+type = 'page'
 linkTitle = 'Support'
 [menus]
   [menus.meta]
