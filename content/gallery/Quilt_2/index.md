@@ -1,5 +1,5 @@
 +++
-title = "Embriodery Quilt"
+title = "Embriodery Tapestry"
 date = 2024-12-09T17:19:20-08:00
 media = "Embroidery on Linen"
 # exhibition = ""
@@ -20,7 +20,7 @@ buyer = "REDACTED"
 from_csv = true
 [[resources]]
   src = "Quilt 2.webp"
-  title = "Embriodery Quilt"
+  title = "Embriodery Tapestry"
   [resources.params]
   date = ""
 
